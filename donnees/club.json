@@ -1,0 +1,211 @@
+{
+  "nom": "Team Cycliste Coincy Metz 3",
+  "sigle": "TCCM3",
+  "ancien_nom": "Coincy Cyclo Sport",
+  "fondation": 2000,
+  "fin": 2020,
+  "siege": "48 rue Principale, 57530 Coincy (Moselle)",
+  "facebook": "https://www.facebook.com/groups/20222430078/",
+
+  "accroche": "De 2000 à 2020, un club de village à sept kilomètres de Metz a fait rouler des dizaines de coureurs, des poussins aux élites, et organisé chaque année des courses autour de Coincy, de la Comogyre et du Pays de Pange.",
+
+  "histoire": [
+    "Tout part de l'association Neige et Soleil, qui anime la vie de Coincy depuis 1980. En 2000, son président Claude Manceau y crée une section vélo, le Coincy Cyclo Sport, pour réunir les compétiteurs et les passionnés du village et des alentours. Le club s'affilie à la Fédération française de cyclisme et à l'UFOLEP.",
+    "Dès 2001, la section organise ses premières courses, le Grand Prix de Courcelles-Chaussy et celui de Bazoncourt. Une équipe sénior s'engage en 2002 au niveau régional, une équipe de nationaux en 2005. Une section VTT apprend aussi aux enfants de 4 à 12 ans à circuler à vélo en sécurité, jusqu'en 2005, faute de bénévoles.",
+    "En 2006 et 2007 naissent les deux courses phares du club : le Grand Prix de la Mirabelle, dans le centre de Metz, avec son secteur pavé, puis le Grand Prix de la Comogyre, dans les villages de Coincy, Montoy-Flanville, Ogy et Retonfey. À l'été 2007, Jean-Christophe Péraud gagne à Courcelles-Chaussy.",
+    "Le 29 septembre 2008, la section quitte Neige et Soleil et devient une association à part entière : la Team Cycliste Coincy Metz 3. Cette saison-là, le club signe 16 victoires et termine 3e club de Lorraine, place qu'il garde en 2009.",
+    "Les années suivantes, le club ajoute un cyclo-cross à Coincy, une course féminine qui voit gagner Pauline Ferrand-Prévot en 2010, le Grand Prix de Rémilly et celui du Pays de Pange. Les effectifs baissent après 2015 : une vingtaine d'adhérents en 2016. Le site du club publie ses derniers articles en 2020."
+  ],
+
+  "chiffres": [
+    {"valeur": "16", "libelle": "victoires en 2008"},
+    {"valeur": "3e", "libelle": "club de Lorraine en 2008 et 2009"},
+    {"valeur": "~100", "libelle": "adhérents au plus fort, en 2008"},
+    {"valeur": "7", "libelle": "courses au calendrier FFC en 2012"}
+  ],
+
+  "chronologie": [
+    {"date": "2000", "titre": "Naissance du Coincy Cyclo Sport", "texte": "Claude Manceau crée une section vélo au sein de l'association Neige et Soleil de Coincy."},
+    {"date": "2001", "titre": "Les premières courses", "texte": "1er Grand Prix de Courcelles-Chaussy et 1er Grand Prix de Bazoncourt, en fin de saison.", "course": "courcelles"},
+    {"date": "2002", "titre": "Une équipe sénior et une école VTT", "texte": "L'équipe sénior court au niveau régional. La section VTT accueille douze enfants de 4 à 12 ans."},
+    {"date": "2005", "titre": "Une équipe de nationaux", "texte": "Le club engage une équipe en division nationale. La section VTT s'arrête, faute de bénévoles et de moyens."},
+    {"date": "2006", "titre": "Un entraîneur BF3 et six nationaux", "texte": "L'entraîneur obtient le brevet fédéral de 3e niveau, le club achète un véhicule et aligne six coureurs en équipe nationale. Johan Boucher devient champion de Lorraine sur piste.", "coureur": "boucher"},
+    {"date": "2006-08-27", "titre": "1er Grand Prix de la Mirabelle", "texte": "Avec la Fédération des commerçants de Metz, pendant les fêtes de la Mirabelle, en présence du député Denis Jacquat et de la reine de la Mirabelle.", "course": "mirabelle"},
+    {"date": "2007-03-04", "titre": "1er Grand Prix de la Comogyre", "texte": "Le Grand Prix d'ouverture, à Montoy-Flanville, est remporté par Anthony Roux.", "course": "comogyre"},
+    {"date": "2007-08-26", "titre": "2e Grand Prix de la Mirabelle", "texte": "Des courses minimes-cadets et 1re, 2e, 3e catégories et juniors dans le centre de Metz.", "course": "mirabelle"},
+    {"date": "2007-09-30", "titre": "Jean-Christophe Péraud gagne à Courcelles-Chaussy", "texte": "6e Grand Prix de Courcelles-Chaussy. Gérard Béghin, du club, termine 2e, Bruno Chardon 3e.", "course": "courcelles"},
+    {"date": "2007-10-15", "titre": "Le club sur Internet", "texte": "Florian Manceau ouvre le site tc-coincy.fr.gd. « Je ne suis pas un professionnel de l'informatique mais je me suis débrouillé pour le bien de ce site. »"},
+    {"date": "2007-11-24", "titre": "L'assemblée générale de la Moselle à Coincy", "texte": "Le comité départemental de cyclisme se réunit à la mairie de Coincy."},
+    {"date": "2007-12-21", "titre": "Romain Genter rejoint le club", "texte": "L'ancien champion de France du contre-la-montre juniors signe au comité de Lorraine.", "coureur": "genter"},
+    {"date": "2008-01-26", "titre": "Une galette pour cent personnes", "texte": "La galette géante du boulanger M. Mellinger réunit coureurs, dirigeants et sponsors à la salle des fêtes."},
+    {"date": "2008-03-18", "titre": "Première victoire de la saison", "texte": "Kévin Hamel ouvre le compteur ; il en signera neuf.", "coureur": "hamel"},
+    {"date": "2008-04-27", "titre": "2e Grand Prix de la Comogyre", "course": "comogyre", "texte": "Deuxième édition de la course d'ouverture du club."},
+    {"date": "2008-05-17", "titre": "Romain Genter gagne à Étain", "texte": "Cinquième victoire du club de la saison.", "coureur": "genter"},
+    {"date": "2008-06-01", "titre": "Kévin Hamel champion de Lorraine UFOLEP", "texte": "Après les titres d'académie UNSS et FFSU en avril, puis trois étapes des Boucles de la Haute-Meurthe la semaine suivante.", "coureur": "hamel"},
+    {"date": "2008-06-08", "titre": "« Régis le maudit »", "texte": "Au championnat de Lorraine, Régis Bourgeois lève les bras un tour trop tôt et termine 2e.", "coureur": "bourgeois"},
+    {"date": "2008-07-20", "titre": "16e victoire de la saison", "texte": "Yoann Crunel s'impose à Fresnes-en-Woëvre.", "coureur": "crunel"},
+    {"date": "2008-08-24", "titre": "3e Grand Prix de la Mirabelle", "texte": "Deux courses dans les rues de Metz.", "course": "mirabelle"},
+    {"date": "2008-09-29", "titre": "Le Coincy Cyclo Sport devient le TC Coincy Metz 3", "texte": "La section quitte Neige et Soleil et devient une association de droit local à part entière."},
+    {"date": "2008", "titre": "Le premier cyclo-cross de Coincy", "texte": "Pascal Perrin (ASPTT Nancy) remporte la première édition du cyclo-cross de la Comogyre.", "course": "cyclocross"},
+    {"date": "2009", "titre": "Toujours 3e club de Lorraine", "texte": "Yoann Crunel est champion de Lorraine de l'américaine juniors, Benjamin Ledoux champion de Moselle cadets sur route et contre-la-montre."},
+    {"date": "2010-03-28", "titre": "Pauline Ferrand-Prévot gagne à Flanville", "texte": "Le 1er Grand Prix féminin de la Comogyre ouvre l'Étoile du Grand Est féminine.", "course": "feminin"},
+    {"date": "2010-11-28", "titre": "Irwin Gras, deux fois de suite", "texte": "Au 3e cyclo-cross de Coincy, l'espoir d'Étupes, 22e la veille en Coupe du monde, gagne à nouveau.", "course": "cyclocross"},
+    {"date": "2011-03-27", "titre": "Christine Majerus gagne à Retonfey", "texte": "2e Grand Prix féminin de la Comogyre.", "course": "feminin"},
+    {"date": "2011-11-11", "titre": "Cyclo-cross « Souvenir Sarah Bernard »", "texte": "Pascal Perrin, champion de France master, gagne la 4e édition, manche du Trophée mosellan.", "course": "cyclocross"},
+    {"date": "2012-01-14", "titre": "Le club anime l'arrivée du Tour de France", "texte": "La ville de Metz choisit le club de Coincy pour une animation lors de l'étape de juillet."},
+    {"date": "2012-01-20", "titre": "Une piste de BMX acceptée", "texte": "Le Conseil général donne son accord au projet de piste de BMX."},
+    {"date": "2012-09-30", "titre": "1er Grand Prix du Pays de Pange", "texte": "Avec la communauté de communes, à Vaucremont.", "course": "pange"},
+    {"date": "2012-12-09", "titre": "Tous à vélo pour le Téléthon", "texte": "Sous la neige, 528 km à vélo de route, 771 km en VTT, de la marche et même du ski de fond : 732 € pour l'AFM."},
+    {"date": "2013-09-29", "titre": "Le championnat de Lorraine Master à Vaucremont", "texte": "Le 2e Grand Prix du Pays de Pange accueille le titre régional, en présence de la députée Marie-Jo Zimmermann et du sénateur Jean-Louis Masson.", "course": "pange"},
+    {"date": "2015-01-25", "titre": "Fin de Neige et Soleil", "texte": "L'association d'où est né le club est dissoute."},
+    {"date": "2015-08-29", "titre": "Un nouveau site, réunissant les anciens", "texte": "tc-coincy.fr repart sur WordPress à partir des anciens sites, du forum de 2008 et du groupe Facebook de 2009."},
+    {"date": "2016-04-03", "titre": "Le retour du Grand Prix de la Comogyre", "texte": "Après quelques saisons d'annulations, 150 coureurs bravent la pluie à Ogy. Julien Masson gagne au sprint devant Bruno Chardon et Steve Chainel.", "course": "comogyre"},
+    {"date": "2016", "titre": "Les trois victoires d'Enzo Hirsch", "texte": "Le jeune pupille gagne à Tucquegnieux, Fameck et Bertrange.", "coureur": "hirsch"},
+    {"date": "2017-04-02", "titre": "Le championnat de Moselle à Montoy-Flanville", "texte": "6e Grand Prix d'Ogy-Montoy-Flanville, gagné par Gaëtan Huck.", "course": "comogyre"},
+    {"date": "2018-07-31", "titre": "Initiation dans les écoles", "texte": "Le club initie les enfants des écoles d'Ennery puis de Trémery."},
+    {"date": "2019-10-29", "titre": "Le maillot du club aux Pays-Bas", "texte": "Tony Stoffels porte les couleurs du TCCM3 sur le circuit national néerlandais de cyclo-cross.", "coureur": "stoffels"},
+    {"date": "2020", "titre": "Derniers articles du site", "texte": "Le site tc-coincy.fr publie ses dernières nouvelles en 2020."}
+  ],
+
+  "saisons": {
+    "2000": {"resume": "Naissance du Coincy Cyclo Sport au sein de Neige et Soleil."},
+    "2001": {"resume": "Premières courses organisées, à Courcelles-Chaussy et Bazoncourt."},
+    "2002": {"resume": "Une équipe sénior au niveau régional et une école VTT pour les enfants."},
+    "2005": {"resume": "Une équipe de nationaux ; fin de la section VTT."},
+    "2006": {"resume": "Le Grand Prix de la Mirabelle voit le jour à Metz.", "titres": ["Johan Boucher, champion de Lorraine sur piste"]},
+    "2007": {"resume": "Trois courses phares : Comogyre, Mirabelle, Courcelles-Chaussy. 70 licenciés, de pré-licencié à 1re catégorie.", "titres": ["Johan Boucher, champion de Lorraine sur piste", "Gérard Béghin vainqueur à Sarreguemines"]},
+    "2008": {
+      "resume": "La grande saison : 16 victoires, 23 places dans les cinq premiers, 3e club de Lorraine. Le Coincy Cyclo Sport devient le TC Coincy Metz 3.",
+      "victoires": 16, "classement": "3e club lorrain",
+      "titres": ["Kévin Hamel, champion de Lorraine UFOLEP", "Kévin Hamel, champion de Lorraine d'académie UNSS et FFSU", "Johan Boucher, champion de Lorraine sur piste", "Romain Genter, sélectionné au championnat de France du contre-la-montre (41e)"],
+      "victoires_detail": [
+        {"coureur": "Kévin Hamel", "nombre": 9, "detail": "titres UFOLEP et d'académie, trois étapes des Boucles de la Haute-Meurthe, Flavigny, Blainville, Belleville-sur-Meuse, Évaux"},
+        {"coureur": "Johan Boucher", "nombre": 4, "detail": "titre régional sur piste, vitesse 200 m, kilomètre, omnium de Lunéville"},
+        {"coureur": "Romain Genter", "nombre": 1, "detail": "Étain"},
+        {"coureur": "Yoann Crunel", "nombre": 1, "detail": "Fresnes-en-Woëvre"},
+        {"coureur": "Eugenio Crémone", "nombre": 1, "detail": "Varangéville (Pass'cyclisme)"}
+      ],
+      "places": ["2e : Régis Bourgeois au championnat de Lorraine 3e catégorie, à Arracourt, Damelevières et Creutzwald", "2e : Yann Tomassi à Thionville ; Johan Boucher et Yoann Crunel sur piste à Commercy", "3e : Kévin Hamel à Bertrange et au classement de la montagne du Challenge de l'Est ; Christophe Biltgen à Chantraine ; Johan Boucher à Carignan ; Didier Seichepine en VTT à Hombourg", "4e : Gérard Béghin au championnat de Lorraine 1re catégorie ; Régis Bourgeois à Guénange et Briey ; Didier Seichepine à Hettange et Arracourt ; Romain Genter à Saint-Mihiel", "Johan Boucher 19e à Preux-au-Bois (élite nationale), 3e d'une élite en Belgique"]
+    },
+    "2009": {"resume": "Encore 3e club de Lorraine. Le Grand Prix de la Mirabelle est annulé.", "classement": "3e club lorrain", "titres": ["Yoann Crunel, champion de Lorraine de l'américaine juniors", "Benjamin Ledoux, champion de Moselle cadets sur route et contre-la-montre", "Un coureur champion de Moselle sur route ; plusieurs vice-champions de Moselle (VTT master, contre-la-montre, route)"]},
+    "2010": {"resume": "La course féminine de la Comogyre ouvre l'Étoile du Grand Est.", "titres": ["Charlie Lamberty, champion de Moselle cadets sur route", "Un junior champion de Moselle du contre-la-montre", "Marc Minet au championnat de France UFOLEP"]},
+    "2011": {"resume": "Christine Majerus gagne à Retonfey ; projet de piste de BMX."},
+    "2012": {"resume": "Sept courses au calendrier FFC, une animation pour le Tour de France à Metz et un Téléthon sous la neige.", "titres": ["Marc Minet vainqueur du cyclo-cross de Longwy"]},
+    "2013": {"resume": "Le championnat de Lorraine Master à Vaucremont ; Johan Boucher et Charlie Lamberty au Tour de Dimona, en Israël, avec la sélection de Moselle."},
+    "2014": {"resume": "Nouveau site officiel et troisième édition de Tous à vélo pour le Téléthon."},
+    "2015": {"resume": "Grand Prix du Pays de Pange à Vaucremont ; sorties du dimanche préparées par Gérard Grégori."},
+    "2016": {"resume": "Une seule course organisée, mais quelle course : 150 partants sous la pluie à Ogy.", "titres": ["Enzo Hirsch, trois victoires chez les pupilles"]},
+    "2017": {"resume": "Le championnat de Moselle à Montoy-Flanville. Une vingtaine d'adhérents.", "titres": ["Laurent Varinot vainqueur de sa catégorie au VTT du bois d'Amnéville"]},
+    "2018": {"resume": "Initiation dans les écoles d'Ennery et Trémery.", "titres": ["Laurent Varinot vainqueur dès sa première course en Coupe Grand Est, à Villers-lès-Nancy"]},
+    "2019": {"resume": "Tony Stoffels court aux Pays-Bas sous le maillot du club."},
+    "2020": {"resume": "Dernières nouvelles publiées."}
+  },
+
+  "coureurs": [
+    {"id": "genter", "nom": "Romain Genter", "role": "Rouleur, contre-la-montre", "periode": "2008–2012", "texte": "Né en 1983. Champion de France cadets sur route en 1998, vice-champion du monde juniors de poursuite par équipes en 2000, champion de France du contre-la-montre juniors en 2001. Il rejoint le club fin 2007 après deux ans de retrait, gagne à Étain et court le championnat de France élite du contre-la-montre en 2008. En 2016, il prend encore la 2e place de la course Pass'cyclisme de la Comogyre."},
+    {"id": "boucher", "nom": "Johan Boucher", "role": "Pistard et sprinteur", "periode": "2006–2008", "texte": "Né en 1987 à Kanfen. Champion de Lorraine sur piste séniors en 2006, 2007 et 2008, quatre victoires sur piste en 2008. Il gagne ensuite une étape du Tour du Cameroun en 2009 et part en 2013 au Tour de Dimona, en Israël, avec Charlie Lamberty."},
+    {"id": "hamel", "nom": "Kévin Hamel", "role": "Junior puis 2e catégorie", "periode": "2008", "texte": "Arrivé à 17 ans pour la saison 2008, il signe neuf des seize victoires du club : champion de Lorraine UFOLEP, champion d'académie UNSS et FFSU, les trois étapes des Boucles de la Haute-Meurthe."},
+    {"id": "bourgeois", "nom": "Régis Bourgeois", "role": "3e catégorie", "periode": "2007–2008", "texte": "Le plus malchanceux de 2008 : cinq fois 2e, dont le championnat de Lorraine, perdu après avoir levé les bras un tour trop tôt. On le retrouve à Rémilly en 2012."},
+    {"id": "crunel", "nom": "Yoann Crunel", "role": "Junior", "periode": "2008–2009", "texte": "Auteur de la 16e victoire de 2008, à Fresnes-en-Woëvre, puis champion de Lorraine de l'américaine juniors en 2009."},
+    {"id": "eugenio", "nom": "Eugenio Crémone", "role": "Pass'cyclisme", "periode": "2008", "texte": "« Eugé » gagne à Varangéville en avril 2008 ; sa course d'Étain a été filmée et mise en ligne."},
+    {"id": "beghin", "nom": "Gérard Béghin", "role": "1re catégorie", "periode": "2007–2008", "texte": "Puncheur, vainqueur à Sarreguemines en 2007 et 2e derrière Jean-Christophe Péraud à Courcelles-Chaussy. 4e du championnat de Lorraine 1re catégorie en 2008."},
+    {"id": "ledoux", "nom": "Benjamin Ledoux", "role": "Cadet", "periode": "2009", "texte": "Champion de Moselle cadets sur route et contre-la-montre en 2009."},
+    {"id": "lamberty", "nom": "Charlie Lamberty", "role": "Cadet puis junior", "periode": "2010–2013", "texte": "Champion de Moselle cadets sur route en 2010, sélectionné pour le Tour de Dimona en 2013."},
+    {"id": "minet", "nom": "Marc Minet", "role": "Cyclo-cross, UFOLEP", "periode": "2010–2012", "texte": "Au championnat de France UFOLEP en 2010, vainqueur du cyclo-cross de Longwy en 2012."},
+    {"id": "varinot", "nom": "Laurent Varinot", "role": "VTT et cyclo-cross", "periode": "2010–2018", "texte": "Fidèle des cyclo-cross de Coincy, délégué sécurité du club. Il boucle le Trophée des Crapauds en solitaire en 2017 et gagne en VTT à Amnéville puis en Coupe Grand Est."},
+    {"id": "hirsch", "nom": "Enzo Hirsch", "role": "Pupille", "periode": "2016", "texte": "Trois victoires en 2016 : Tucquegnieux, Fameck et Bertrange."},
+    {"id": "stoffels", "nom": "Tony Stoffels", "role": "Cyclo-cross", "periode": "2019", "texte": "Représente le club sur le circuit national néerlandais de cyclo-cross."}
+  ],
+  "effectif_2008": "Autour d'eux en 2008 : Christophe Biltgen, Didier Seichepine, Yann Tomassi, Pierre Fellrath, Jean-Philippe Béghin, Christophe Romano et Loïc Karboviac.",
+
+  "encadrement": [
+    {"nom": "Claude Manceau", "role": "Fondateur et président", "texte": "Crée la section vélo en 2000 et préside le club jusqu'au bout. Les engagements arrivent chez lui, 48 rue Principale."},
+    {"nom": "Florian Manceau", "role": "Webmaster et trésorier", "texte": "Ouvre le premier site en 2007 et tient tous les suivants."},
+    {"nom": "Julien Manceau", "role": "Secrétaire", "texte": "Rédige les premières nouvelles du site et court encore en 2016."},
+    {"nom": "Claude Bernard", "role": "Vice-président", "texte": ""},
+    {"nom": "Gérard Grégori", "role": "Sorties du dimanche", "texte": "Prépare chaque semaine les parcours des sorties, de 50 à 95 km au départ de Coincy."},
+    {"nom": "Olivier Guinet", "role": "Trésorier adjoint", "texte": ""},
+    {"nom": "Stéphane Dupré et Patrick Harand", "role": "Administrateurs", "texte": ""}
+  ],
+
+  "courses": [
+    {"id": "comogyre", "nom": "Grand Prix de la Comogyre", "lieu": "Montoy-Flanville, Ogy, Coincy, Retonfey, Pange", "texte": "La course d'ouverture du club, dans les villages du syndicat intercommunal de la Comogyre. Un circuit de 15 à 19 km par Montoy-Flanville, Noisseville, Puche, Saint-Agnan, Ogy et Coincy.",
+     "editions": [
+      {"date": "2007-03-04", "numero": "1re", "lieu": "Montoy-Flanville", "vainqueur": "Anthony Roux"},
+      {"date": "2008-04-27", "numero": "2e"},
+      {"date": "2012-03-18", "numero": "3e", "lieu": "Montoy-Flanville", "vainqueur": "Bruno Chardon (UC Barisienne)", "note": "95 km, 5 tours de 19 km"},
+      {"date": "2013-03-17", "numero": "4e", "lieu": "Pange", "vainqueur": "Thomas Demesy (ASPTT Nancy)", "note": "13 classés sur 55 partants"},
+      {"date": "2016-04-03", "numero": "5e", "lieu": "Ogy", "vainqueur": "Julien Masson", "note": "150 coureurs sous la pluie ; Pass' : Thibault Lecomte devant Romain Genter"},
+      {"date": "2017-04-02", "numero": "6e", "lieu": "Montoy-Flanville", "vainqueur": "Gaëtan Huck (P.E. Haguenau)", "note": "championnat de Moselle, 7 tours de 18 km"}
+     ]},
+    {"id": "mirabelle", "nom": "Grand Prix de la Mirabelle", "lieu": "Metz, fêtes de la Mirabelle", "texte": "Avec la Fédération des commerçants de Metz, le dernier dimanche d'août, dans le centre-ville. Son secteur pavé la rendait unique en Lorraine.",
+     "editions": [
+      {"date": "2006-08-27", "numero": "1re", "note": "en présence du député Denis Jacquat"},
+      {"date": "2007-08-26", "numero": "2e", "note": "minimes-cadets et 1re, 2e, 3e catégories-juniors"},
+      {"date": "2008-08-24", "numero": "3e", "note": "deux courses"},
+      {"date": "2009", "note": "annulé"}
+     ]},
+    {"id": "courcelles", "nom": "Grand Prix de Courcelles-Chaussy", "lieu": "Courcelles-Chaussy", "texte": "La plus ancienne course du club, créée dès 2001.",
+     "editions": [
+      {"date": "2001", "numero": "1re"},
+      {"date": "2002", "numero": "2e"},
+      {"date": "2003", "numero": "3e"},
+      {"date": "2005-06-26", "numero": "4e"},
+      {"date": "2006-06-18", "numero": "5e", "vainqueur": "David Delafaite"},
+      {"date": "2007-09-30", "numero": "6e", "vainqueur": "Jean-Christophe Péraud", "note": "2e Gérard Béghin (TCCM3), 3e Bruno Chardon"},
+      {"date": "2008-06-15", "numero": "7e", "vainqueur": "Rechenmann"}
+     ]},
+    {"id": "cyclocross", "nom": "Cyclo-cross de la Comogyre", "lieu": "Coincy", "texte": "Un circuit fermé près du village, en novembre, avec des engagés de renom.",
+     "editions": [
+      {"date": "2008", "numero": "1re", "vainqueur": "Pascal Perrin (ASPTT Nancy)"},
+      {"date": "2009", "numero": "2e", "vainqueur": "Irwin Gras (EC Stéphanois)"},
+      {"date": "2010-11-28", "numero": "3e", "vainqueur": "Irwin Gras (CC Étupes)"},
+      {"date": "2011-11-11", "numero": "4e", "vainqueur": "Pascal Perrin (ASPTT Nancy)", "note": "Souvenir Sarah Bernard, Trophée mosellan"},
+      {"date": "2012-11-03", "numero": "5e", "vainqueur": "Pascal Perrin"},
+      {"date": "2013-11-02", "numero": "6e", "vainqueur": "Pascal Triebel (Luxembourg)"}
+     ]},
+    {"id": "feminin", "nom": "Grand Prix féminin de la Comogyre", "lieu": "Flanville, Retonfey", "texte": "Première manche de l'Étoile du Grand Est féminine.",
+     "editions": [
+      {"date": "2010-03-28", "numero": "1re", "lieu": "Flanville", "vainqueur": "Pauline Ferrand-Prévot", "note": "alors championne du monde juniors de VTT"},
+      {"date": "2011-03-27", "numero": "2e", "lieu": "Retonfey", "vainqueur": "Christine Majerus"}
+     ]},
+    {"id": "remilly", "nom": "Grand Prix de Rémilly", "lieu": "Rémilly, fête du village", "texte": "Une course ancienne, organisée par le club au début de juillet.",
+     "editions": [
+      {"date": "2008-07-06", "numero": "18e"},
+      {"date": "2009-07-05", "numero": "19e"},
+      {"date": "2010-07-04", "numero": "20e"},
+      {"date": "2011-07-03", "numero": "21e"},
+      {"date": "2012-07-01", "numero": "22e", "vainqueur": "Grégoire Balland (JEC Déodatienne)"},
+      {"date": "2013-07-07", "numero": "23e"}
+     ]},
+    {"id": "pange", "nom": "Grand Prix du Pays de Pange", "lieu": "Vaucremont (Bazoncourt)", "texte": "Héritier du Grand Prix de Bazoncourt de 2001, avec la communauté de communes du Pays de Pange.",
+     "editions": [
+      {"date": "2012-09-30", "numero": "1re", "note": "Pass'cyclisme et UFOLEP, 66,4 km"},
+      {"date": "2013-09-29", "numero": "2e", "note": "championnat de Lorraine Master"},
+      {"date": "2015-09-13", "vainqueur": "Jean-Charles Martin", "note": "Pass' : Éric Petitjean"}
+     ]}
+  ],
+
+  "vie": [
+    {"titre": "La galette des rois", "texte": "Chaque janvier, le club réunit coureurs, sponsors et habitants autour d'une galette géante du boulanger M. Mellinger, assez grande pour une centaine de personnes."},
+    {"titre": "Les sorties du dimanche", "texte": "Départ 9 heures de Coincy, trois parcours au choix, de 50 à 95 km, vers la Nied, la Seille ou le pays messin. Gérard Grégori les envoyait chaque samedi, avec la météo."},
+    {"titre": "Le Téléthon", "texte": "Le club roule d'abord au Téléthon de Vigy, à vingt centimes le kilomètre, puis organise « Tous à vélo » à Coincy de 2012 à 2014."},
+    {"titre": "Les soirées et l'assemblée générale", "texte": "Soirées Beaujolais en novembre, assemblée générale en janvier à Coincy ou Montoy-Flanville, tournoi de pétanque au printemps."},
+    {"titre": "Les jeunes", "texte": "École VTT de 2002 à 2005, entraînements à la Grange-aux-Bois, initiation dans les écoles d'Ennery et de Trémery en 2018."}
+  ],
+
+  "sites": [
+    {"periode": "2007–2009", "nom": "tc-coincy.fr.gd", "texte": "Le premier site, ouvert par Florian Manceau le 15 octobre 2007. 5 000 visiteurs dès janvier 2008."},
+    {"periode": "2008", "nom": "Forum Xooit", "texte": ""},
+    {"periode": "2009", "nom": "Groupe Facebook", "texte": "Toujours en ligne."},
+    {"periode": "2010–2012", "nom": "tccoincy.free.fr", "texte": "La « web TV vélo Lorraine » du club, avec les vidéos de prod-video."},
+    {"periode": "2014–2020", "nom": "tc-coincy.fr", "texte": "Le site officiel, refait sur WordPress en 2015 à partir de tous les précédents."}
+  ],
+
+  "partenaires": ["SIVOM de la Comogyre", "Fédération des commerçants de Metz", "Comité régional de Lorraine de cyclisme", "Conseil régional de Lorraine", "Conseil général de la Moselle", "AVIA Jean-Luc Pawlak", "Fleurêve", "ProShooting", "Vélocenter Goedert", "Kingom", "Garage Arnould", "Lorraine Fluviale", "Fortunel Parquet", "L'Atelier H", "LOREAT", "ONSPOT", "Boulangerie Dominique Mellinger", "Nutri-Bay", "Lorraine Poids-Lourd", "Le Mont d'Anon"],
+
+  "videos": [
+    {"plateforme": "dailymotion", "id": "x5jf3v", "titre": "Eugé à Étain", "date": "2008-05-17"},
+    {"plateforme": "dailymotion", "id": "xmel81", "titre": "4e cyclo-cross de Coincy, 11 novembre 2011 (prodvideo)", "date": "2011-11-11"}
+  ]
+}

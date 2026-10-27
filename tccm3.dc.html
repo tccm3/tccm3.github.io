@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Cycliste Coincy Metz 3 — 2000-2020</title>
+<meta name="description" content="Histoire du Team Cycliste Coincy Metz 3 (ex-Coincy Cyclo Sport), club cycliste de Coincy, Moselle, de 2000 à 2020.">
+<link rel="stylesheet" href="assets/modernist.css">
+<style>
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)}
+a{color:inherit;text-underline-offset:3px}
+a:hover{color:var(--color-accent)}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:16px;line-height:1.55">
+
+<header style="border-bottom:2px solid var(--color-divider)">
+  <div style="max-width:1200px;margin:0 auto;padding:16px 24px 0;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px">
+    <a href="#/" style="text-decoration:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+      <span style="font-family:var(--font-heading);font-weight:800;font-size:21px;letter-spacing:-0.01em">TC Coincy Metz 3</span>
+      <span style="font-size:14px;color:var(--color-neutral-700)">{{ debut }}–{{ fin }}</span>
+    </a>
+    <div style="display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14px;font-weight:600">
+      <a href="#/recherche" style="color:var(--color-accent-700)">Rechercher</a>
+      <a href="{{ fbUrl }}" target="_blank" rel="noopener">Le groupe Facebook</a>
+    </div>
+  </div>
+  <nav style="max-width:1200px;margin:0 auto;padding:12px 24px 0;display:flex;flex-wrap:wrap;gap:0 22px">
+    <sc-for list="{{ nav }}" as="n" hint-placeholder-count="8">
+      <sc-if value="{{ n.actif }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ n.href }}" style="font-size:15px;font-weight:600;text-decoration:none;padding:6px 0 10px;color:var(--color-accent);border-bottom:2px solid var(--color-accent);margin-bottom:-2px">{{ n.label }}</a>
+      </sc-if>
+      <sc-if value="{{ n.inactif }}" hint-placeholder-val="{{ true }}">
+        <a href="{{ n.href }}" style="font-size:15px;text-decoration:none;padding:6px 0 10px;border-bottom:2px solid transparent;margin-bottom:-2px">{{ n.label }}</a>
+      </sc-if>
+    </sc-for>
+  </nav>
+</header>
+
+<sc-if value="{{ erreurChargement }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1200px;margin:0 auto;padding:24px">Les données n'ont pas pu être lues. Ouvrez le site depuis GitHub Pages, ou lancez <code>python -m http.server</code> dans le dossier <code>docs</code>.</div>
+</sc-if>
+
+<main style="flex:1">
+
+<sc-if value="{{ vAccueil }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Accueil">
+  <section style="max-width:1200px;margin:0 auto;padding:56px 24px 40px;display:grid;gap:22px">
+    <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Club cycliste de Coincy, Moselle · {{ debut }}–{{ fin }}</div>
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(46px,8vw,112px);line-height:0.92;letter-spacing:-0.035em;margin:0;max-width:12ch">Team Cycliste Coincy Metz 3</h1>
+    <p style="margin:0;max-width:60ch;font-size:20px;line-height:1.5;text-wrap:pretty">{{ accroche }}</p>
+  </section>
+
+  <sc-if value="{{ pFrise }}" hint-placeholder-val="{{ false }}">
+    <section style="max-width:1200px;margin:0 auto;padding:0 24px">
+      <div style="padding:16px 0 12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 16px;border-top:2px solid var(--color-divider)">
+        <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:20px;margin:0">Saison après saison</h2>
+          <span style="font-size:14px;color:var(--color-neutral-700)">Faites glisser la frise ou utilisez les flèches</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <div style="display:flex;gap:2px">
+            <button type="button" onClick="{{ frisePrec }}" aria-label="Saisons précédentes" style="width:44px;height:40px;font:inherit;font-weight:800;font-size:18px;background:transparent;color:var(--color-text);border:1px solid var(--color-divider);border-radius:0;cursor:pointer" style-hover="background:var(--color-neutral-200)">←</button>
+            <button type="button" onClick="{{ friseSuiv }}" aria-label="Saisons suivantes" style="width:44px;height:40px;font:inherit;font-weight:800;font-size:18px;background:transparent;color:var(--color-text);border:1px solid var(--color-divider);border-radius:0;cursor:pointer" style-hover="background:var(--color-neutral-200)">→</button>
+          </div>
+          <a href="#/histoire" style="font-size:14px;font-weight:600">Toute l'histoire →</a>
+        </div>
+      </div>
+      <div ref="{{ friseRef }}" onMouseDown="{{ friseDown }}" onClickCapture="{{ friseClic }}" onDragStart="{{ friseDragStart }}" style="display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,1fr);overflow-x:auto;scrollbar-width:thin;cursor:grab;user-select:none;border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+        <sc-for list="{{ saisons }}" as="s" hint-placeholder-count="8">
+          <a href="{{ s.href }}" style="display:flex;flex-direction:column;gap:12px;padding:16px 20px 24px;border-right:2px solid var(--color-divider);text-decoration:none;min-height:250px" style-hover="background:var(--color-neutral-200);color:inherit">
+            <span style="font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.03em">{{ s.annee }}</span>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ s.titres }}" as="e" hint-placeholder-count="2">
+                <span style="font-size:14px;line-height:1.3;padding-left:10px;border-left:2px solid var(--color-accent)">{{ e.titre }}</span>
+              </sc-for>
+            </div>
+            <sc-if value="{{ s.aPlus }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size:13px;color:var(--color-neutral-700)">{{ s.plus }}</span>
+            </sc-if>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ pSaisons }}" hint-placeholder-val="{{ true }}">
+    <section style="max-width:1200px;margin:0 auto;padding:0 24px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+        <sc-for list="{{ saisons }}" as="s" hint-placeholder-count="21">
+          <a href="{{ s.href }}" style="position:relative;display:flex;flex-direction:column;gap:10px;padding:16px;min-height:180px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">
+            <sc-if value="{{ s.actif }}" hint-placeholder-val="{{ false }}">
+              <span style="position:absolute;top:0;left:0;right:0;height:6px;background:var(--color-accent)"></span>
+            </sc-if>
+            <span style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;margin-top:6px">{{ s.annee }}</span>
+            <span style="font-size:14px;line-height:1.35;flex:1">{{ s.resume }}</span>
+            <sc-if value="{{ s.aStats }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ s.stats }}</span>
+            </sc-if>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ pRecherche }}" hint-placeholder-val="{{ false }}">
+    <section style="max-width:1200px;margin:0 auto;padding:0 24px 24px;display:grid;gap:16px">
+      <label style="display:grid;gap:6px;max-width:900px">
+        <span style="font-size:14px;color:var(--color-neutral-700)">Un coureur, une course, un village, une année</span>
+        <input type="search" value="{{ q }}" onChange="{{ onQ }}" placeholder="Genter, Mirabelle, Flanville, 2008…" style="width:100%;min-height:72px;padding:12px 18px;font:inherit;font-family:var(--font-heading);font-weight:800;font-size:clamp(22px,3vw,32px);color:var(--color-text);background:var(--color-surface);border:2px solid var(--color-text);border-radius:0;caret-color:var(--color-accent)" style-focus="border-color:var(--color-accent);outline:none">
+      </label>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+        <span style="font-size:14px;color:var(--color-neutral-700);margin-right:4px">Essayez :</span>
+        <sc-for list="{{ suggestions }}" as="g" hint-placeholder-count="8">
+          <button type="button" onClick="{{ g.choisir }}" style="padding:7px 12px;font:inherit;font-size:14px;background:transparent;color:var(--color-text);border:1px solid var(--color-divider);border-radius:0;cursor:pointer" style-hover="background:var(--color-neutral-200)">{{ g.label }}</button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ aRecherche }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid">
+          <span style="font-size:14px;color:var(--color-neutral-700);padding-bottom:8px">{{ resTxt }}</span>
+          <sc-for list="{{ resultatsCourts }}" as="r" hint-placeholder-count="0">
+            <a href="{{ r.href }}" style="display:grid;gap:4px;padding:14px 0;border-top:2px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+              <span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">{{ r.type }} · {{ r.meta }}</span>
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:19px">{{ r.titre }}</span>
+              <span style="max-width:90ch;font-size:15px;color:var(--color-neutral-800)">{{ r.texte }}</span>
+            </a>
+          </sc-for>
+          <sc-if value="{{ resPlus }}" hint-placeholder-val="{{ false }}">
+            <a href="#/recherche" style="padding:14px 0;border-top:2px solid var(--color-divider);font-weight:600">Voir les {{ resultatsN }} résultats →</a>
+          </sc-if>
+        </div>
+      </sc-if>
+    </section>
+  </sc-if>
+
+  <section style="max-width:1200px;margin:0 auto;padding:40px 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+      <sc-for list="{{ chiffres }}" as="c" hint-placeholder-count="4">
+        <div style="padding:18px 16px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);display:grid;gap:4px">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:48px;line-height:1;letter-spacing:-0.03em">{{ c.valeur }}</span>
+          <span style="font-size:14px;color:var(--color-neutral-700)">{{ c.libelle }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:40px 24px 0;display:grid;gap:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0">Les courses du club</h2>
+      <a href="#/courses" style="font-size:14px;font-weight:600">Toutes les éditions →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+      <sc-for list="{{ courses }}" as="c" hint-placeholder-count="7">
+        <a href="{{ c.href }}" style="display:flex;flex-direction:column;gap:8px;padding:16px;min-height:150px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ c.periode }}</span>
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:20px;line-height:1.15">{{ c.nom }}</span>
+          <span style="font-size:14px;color:var(--color-neutral-700);margin-top:auto">{{ c.lieu }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <sc-if value="{{ aPhotosUne }}" hint-placeholder-val="{{ false }}">
+    <section style="max-width:1200px;margin:0 auto;padding:40px 24px 0;display:grid;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0">Dans l'album</h2>
+        <a href="#/photos" style="font-size:14px;font-weight:600">Toutes les photos →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px">
+        <sc-for list="{{ photosUne }}" as="m" hint-placeholder-count="4">
+          <a href="#/photos" style="display:block;aspect-ratio:4/3;overflow:hidden;background:var(--color-surface)">
+            <img src="{{ m.fichier }}" alt="{{ m.legende }}" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+  <div style="height:64px"></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ vHistoire }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Histoire" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Histoire</h1>
+  </div>
+  <section style="border-top:2px solid var(--color-divider);padding:24px 0;display:grid;gap:16px;max-width:72ch">
+    <sc-for list="{{ histoire }}" as="t" hint-placeholder-count="5">
+      <p style="margin:0;font-size:18px;text-wrap:pretty">{{ t.t }}</p>
+    </sc-for>
+  </section>
+  <h2 style="font-family:var(--font-heading);font-weight:800;font-size:32px;margin:24px 0 0;padding:20px 0 0;border-top:2px solid var(--color-divider)">Chronologie</h2>
+  <sc-for list="{{ chronoAnnees }}" as="a" hint-placeholder-count="5">
+    <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),max-content) minmax(0,1fr));gap:0 32px;border-top:1px solid var(--color-divider);padding:18px 0;margin-top:16px">
+      <a href="{{ a.href }}" style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;text-decoration:none;min-width:150px">{{ a.annee }}</a>
+      <div style="display:grid;gap:14px">
+        <sc-for list="{{ a.evts }}" as="e" hint-placeholder-count="2">
+          <article style="display:grid;gap:4px">
+            <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ e.dateTxt }}</span>
+            <h3 style="font-family:var(--font-heading);font-weight:800;font-size:21px;line-height:1.2;margin:0">{{ e.titre }}</h3>
+            <p style="margin:0;max-width:70ch;text-wrap:pretty">{{ e.texte }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+  </sc-for>
+  <section style="border-top:2px solid var(--color-divider);margin-top:24px;padding:20px 0;display:grid;gap:0">
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0 0 12px">Les sites du club</h2>
+    <sc-for list="{{ sites }}" as="s" hint-placeholder-count="5">
+      <div style="display:grid;grid-template-columns:minmax(110px,max-content) minmax(160px,max-content) 1fr;gap:4px 24px;padding:10px 0;border-top:1px solid var(--color-divider)">
+        <span style="font-weight:600">{{ s.periode }}</span>
+        <span style="font-weight:600">{{ s.nom }}</span>
+        <span style="color:var(--color-neutral-800)">{{ s.texte }}</span>
+      </div>
+    </sc-for>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ vSaisons }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Saisons" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Saisons</h1>
+    <p style="margin:0;max-width:60ch;font-size:18px">Une case par année, de la création du club à ses dernières nouvelles.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+    <sc-for list="{{ saisons }}" as="s" hint-placeholder-count="21">
+      <a href="{{ s.href }}" style="position:relative;display:flex;flex-direction:column;gap:10px;padding:16px;min-height:180px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">
+        <sc-if value="{{ s.actif }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:0;left:0;right:0;height:6px;background:var(--color-accent)"></span>
+        </sc-if>
+        <span style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;margin-top:6px">{{ s.annee }}</span>
+        <span style="font-size:14px;line-height:1.35;flex:1">{{ s.resume }}</span>
+        <sc-if value="{{ s.aStats }}" hint-placeholder-val="{{ false }}">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ s.stats }}</span>
+        </sc-if>
+      </a>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ vSaison }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Saison" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:40px 0 20px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;border-bottom:2px solid var(--color-divider)">
+    <div style="display:grid;gap:8px">
+      <a href="#/saisons" style="font-size:14px;font-weight:600;color:var(--color-accent-700)">← Toutes les saisons</a>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(72px,12vw,168px);line-height:0.85;letter-spacing:-0.045em;margin:0">{{ sc.annee }}</h1>
+    </div>
+    <div style="display:flex;gap:2px;flex-wrap:wrap">
+      <sc-if value="{{ sc.aPrec }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ sc.prec }}" style="padding:10px 16px;border:1px solid var(--color-divider);font-weight:800;font-family:var(--font-heading);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">← {{ sc.anneePrec }}</a>
+      </sc-if>
+      <sc-if value="{{ sc.aSuiv }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ sc.suiv }}" style="padding:10px 16px;border:1px solid var(--color-divider);font-weight:800;font-family:var(--font-heading);text-decoration:none;min-width:110px" style-hover="background:var(--color-neutral-200);color:inherit">{{ sc.anneeSuiv }} →</a>
+      </sc-if>
+      <a href="{{ partageFb }}" target="_blank" rel="noopener" style="padding:10px 16px;border:1px solid var(--color-divider);font-weight:800;font-family:var(--font-heading);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">Partager sur Facebook</a>
+    </div>
+  </div>
+  <p style="margin:0;padding:24px 0;font-size:22px;line-height:1.45;max-width:60ch;text-wrap:pretty">{{ sc.resume }}</p>
+  <sc-if value="{{ sc.aFaits }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-wrap:wrap;border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
+      <sc-for list="{{ sc.faits }}" as="f" hint-placeholder-count="2">
+        <div style="padding:16px 32px 16px 0;margin-right:32px;border-right:2px solid var(--color-divider);display:grid;gap:2px">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1">{{ f.valeur }}</span>
+          <span style="font-size:14px;color:var(--color-neutral-700)">{{ f.libelle }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:0 48px">
+    <div style="display:grid;gap:0;align-content:start">
+      <sc-if value="{{ sc.aTitres }}" hint-placeholder-val="{{ false }}">
+        <section style="padding:24px 0 8px;display:grid;gap:8px">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0">Titres et faits d'armes</h2>
+          <sc-for list="{{ sc.titres }}" as="t" hint-placeholder-count="2">
+            <div style="padding:8px 0 8px 12px;border-left:2px solid var(--color-accent)">{{ t.t }}</div>
+          </sc-for>
+        </section>
+      </sc-if>
+      <sc-if value="{{ sc.aVictoires }}" hint-placeholder-val="{{ false }}">
+        <section style="padding:24px 0 8px;display:grid;gap:0">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0 0 10px">Les victoires</h2>
+          <sc-for list="{{ sc.victoires }}" as="v" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:40px minmax(140px,max-content) 1fr;gap:4px 16px;padding:10px 0;border-top:1px solid var(--color-divider)">
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:22px;line-height:1">{{ v.nombre }}</span>
+              <span style="font-weight:600">{{ v.coureur }}</span>
+              <span style="color:var(--color-neutral-800)">{{ v.detail }}</span>
+            </div>
+          </sc-for>
+        </section>
+      </sc-if>
+      <sc-if value="{{ sc.aPlaces }}" hint-placeholder-val="{{ false }}">
+        <section style="padding:24px 0 8px;display:grid;gap:6px">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0 0 4px">Places d'honneur</h2>
+          <sc-for list="{{ sc.places }}" as="t" hint-placeholder-count="3">
+            <p style="margin:0;padding:6px 0;border-top:1px solid var(--color-divider);font-size:15px">{{ t.t }}</p>
+          </sc-for>
+        </section>
+      </sc-if>
+    </div>
+    <div style="display:grid;gap:0;align-content:start">
+      <sc-if value="{{ sc.aEvts }}" hint-placeholder-val="{{ false }}">
+        <section style="padding:24px 0 8px;display:grid;gap:0">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0 0 10px">Au fil de la saison</h2>
+          <sc-for list="{{ sc.evts }}" as="e" hint-placeholder-count="3">
+            <article style="display:grid;gap:4px;padding:12px 0;border-top:1px solid var(--color-divider)">
+              <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ e.dateTxt }}</span>
+              <h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;line-height:1.2;margin:0">{{ e.titre }}</h3>
+              <p style="margin:0;text-wrap:pretty">{{ e.texte }}</p>
+            </article>
+          </sc-for>
+        </section>
+      </sc-if>
+      <sc-if value="{{ sc.aEditions }}" hint-placeholder-val="{{ false }}">
+        <section style="padding:24px 0 8px;display:grid;gap:0">
+          <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0 0 10px">Courses organisées</h2>
+          <sc-for list="{{ sc.editions }}" as="e" hint-placeholder-count="2">
+            <a href="{{ e.href }}" style="display:grid;gap:2px;padding:10px 0;border-top:1px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+              <span style="font-weight:600">{{ e.course }}</span>
+              <span style="font-size:14px;color:var(--color-neutral-800)">{{ e.ligne }}</span>
+            </a>
+          </sc-for>
+        </section>
+      </sc-if>
+    </div>
+  </div>
+  <sc-if value="{{ sc.aPhotos }}" hint-placeholder-val="{{ false }}">
+    <section style="border-top:2px solid var(--color-divider);margin-top:16px;padding:24px 0;display:grid;gap:12px">
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0">Photos {{ sc.annee }}</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px">
+        <sc-for list="{{ sc.photos }}" as="m" hint-placeholder-count="4">
+          <button type="button" onClick="{{ m.ouvrir }}" style="display:block;padding:0;border:0;cursor:zoom-in;aspect-ratio:4/3;overflow:hidden;background:var(--color-surface)">
+            <img src="{{ m.fichier }}" alt="{{ m.legende }}" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+          </button>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ vCoureurs }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Coureurs" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Coureurs</h1>
+    <p style="margin:0;max-width:60ch;font-size:18px">Ceux qui ont porté le maillot et dont les sites du club ont gardé la trace.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+    <sc-for list="{{ coureurs }}" as="c" hint-placeholder-count="6">
+      <article style="display:flex;flex-direction:column;gap:8px;padding:20px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:600">
+          <span style="color:var(--color-accent-700)">{{ c.role }}</span>
+          <span style="color:var(--color-neutral-700)">{{ c.periode }}</span>
+        </div>
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;line-height:1.1;margin:0">{{ c.nom }}</h2>
+        <p style="margin:0;text-wrap:pretty">{{ c.texte }}</p>
+        <sc-if value="{{ c.aEvts }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;gap:4px;border-top:1px solid var(--color-divider);padding-top:10px;margin-top:auto">
+            <sc-for list="{{ c.evts }}" as="e" hint-placeholder-count="1">
+              <a href="{{ e.href }}" style="font-size:14px;text-decoration:none;display:flex;gap:10px" style-hover="color:var(--color-accent)">
+                <span style="color:var(--color-neutral-700);min-width:10ch">{{ e.dateCourte }}</span>
+                <span>{{ e.titre }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </sc-if>
+      </article>
+    </sc-for>
+  </div>
+  <p style="margin:0;padding:20px 0;font-size:16px;border-bottom:2px solid var(--color-divider)">{{ effectif2008 }}</p>
+  <section style="padding:24px 0;display:grid;gap:0">
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:32px;margin:0 0 12px">L'encadrement</h2>
+    <sc-for list="{{ encadrement }}" as="p" hint-placeholder-count="5">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:4px 24px;padding:12px 0;border-top:1px solid var(--color-divider)">
+        <span style="font-weight:700">{{ p.nom }}</span>
+        <span style="color:var(--color-accent-700);font-weight:600">{{ p.role }}</span>
+        <span style="color:var(--color-neutral-800)">{{ p.texte }}</span>
+      </div>
+    </sc-for>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ vCourses }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Courses" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Courses organisées</h1>
+    <p style="margin:0;max-width:60ch;font-size:18px">En moyenne quatre courses par an dans le secteur de Pange et de Metz, et jusqu'à sept en 2012.</p>
+  </div>
+  <sc-for list="{{ courses }}" as="c" hint-placeholder-count="5">
+    <section style="border-top:2px solid var(--color-divider);padding:24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px 40px">
+      <div style="display:grid;gap:8px;align-content:start">
+        <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ c.periode }}</span>
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:32px;line-height:1.05;letter-spacing:-0.02em;margin:0">{{ c.nom }}</h2>
+        <span style="font-size:15px;color:var(--color-neutral-700)">{{ c.lieu }}</span>
+        <p style="margin:0;text-wrap:pretty">{{ c.texte }}</p>
+      </div>
+      <div style="display:grid;align-content:start">
+        <sc-for list="{{ c.editions }}" as="e" hint-placeholder-count="3">
+          <a href="{{ e.hrefAnnee }}" style="display:grid;grid-template-columns:minmax(130px,max-content) 1fr;gap:2px 16px;padding:10px 0;border-bottom:1px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+            <span style="font-weight:600">{{ e.dateTxt }}</span>
+            <span style="display:grid;gap:2px">
+              <span>{{ e.titre }}</span>
+              <sc-if value="{{ e.aNote }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:14px;color:var(--color-neutral-700)">{{ e.note }}</span>
+              </sc-if>
+            </span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ vVie }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Vie du club" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Vie du club</h1>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+    <sc-for list="{{ vie }}" as="v" hint-placeholder-count="5">
+      <article style="display:grid;gap:8px;align-content:start;padding:20px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
+        <h2 style="font-family:var(--font-heading);font-weight:800;font-size:22px;margin:0">{{ v.titre }}</h2>
+        <p style="margin:0;text-wrap:pretty">{{ v.texte }}</p>
+      </article>
+    </sc-for>
+  </div>
+  <section style="padding:32px 0 0;display:grid;gap:12px">
+    <h2 style="font-family:var(--font-heading);font-weight:800;font-size:24px;margin:0">Ils ont soutenu le club</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));border-top:1px solid var(--color-divider)">
+      <sc-for list="{{ partenaires }}" as="p" hint-placeholder-count="12">
+        <span style="padding:10px 12px 10px 0;border-bottom:1px solid var(--color-divider);font-size:15px">{{ p.t }}</span>
+      </sc-for>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ vPhotos }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Photos" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Photos et vidéos</h1>
+  </div>
+  <sc-if value="{{ aAnneesPhotos }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-wrap:wrap;border:1px solid var(--color-divider);width:fit-content;max-width:100%;margin-bottom:16px">
+      <sc-for list="{{ anneesPhotos }}" as="a" hint-placeholder-count="5">
+        <sc-if value="{{ a.actif }}" hint-placeholder-val="{{ false }}">
+          <button type="button" onClick="{{ a.choisir }}" style="padding:8px 12px;font:inherit;font-size:14px;border:0;background:var(--color-accent);color:var(--color-bg);cursor:pointer">{{ a.label }}</button>
+        </sc-if>
+        <sc-if value="{{ a.inactif }}" hint-placeholder-val="{{ true }}">
+          <button type="button" onClick="{{ a.choisir }}" style="padding:8px 12px;font:inherit;font-size:14px;border:0;background:transparent;color:var(--color-text);cursor:pointer" style-hover="background:var(--color-neutral-200)">{{ a.label }}</button>
+        </sc-if>
+      </sc-for>
+    </div>
+  </sc-if>
+  <sc-if value="{{ photosVide }}" hint-placeholder-val="{{ false }}">
+    <p style="border-top:2px solid var(--color-divider);padding:20px 0;margin:0;color:var(--color-neutral-700)">Aucune photo pour l'instant.</p>
+  </sc-if>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px">
+    <sc-for list="{{ photos }}" as="m" hint-placeholder-count="8">
+      <button type="button" onClick="{{ m.ouvrir }}" style="display:block;padding:0;border:0;cursor:zoom-in;aspect-ratio:4/3;overflow:hidden;background:var(--color-surface)">
+        <img src="{{ m.fichier }}" alt="{{ m.legende }}" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+      </button>
+    </sc-for>
+  </div>
+  <sc-if value="{{ aVideos }}" hint-placeholder-val="{{ false }}">
+    <section style="border-top:2px solid var(--color-divider);margin-top:32px;padding-top:24px;display:grid;gap:16px">
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;margin:0">Vidéos</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:32px 24px">
+        <sc-for list="{{ videos }}" as="v" hint-placeholder-count="1">
+          <figure style="display:grid;gap:8px;margin:0">
+            <iframe src="{{ v.embed }}" title="{{ v.titre }}" loading="lazy" style="width:100%;aspect-ratio:16/9;border:0;background:var(--color-surface)"></iframe>
+            <figcaption style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--color-text)">
+              <span style="font-weight:600">{{ v.titre }}</span>
+              <a href="{{ v.lien }}" target="_blank" rel="noopener">Voir sur {{ v.plateformeTxt }}</a>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ vDocs }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Documents" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Documents</h1>
+  </div>
+  <sc-for list="{{ documents }}" as="d" hint-placeholder-count="3">
+    <a href="{{ d.fichier }}" target="_blank" rel="noopener" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;align-items:baseline;padding:14px 0;border-top:2px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+      <span style="font-family:var(--font-heading);font-weight:800;font-size:19px">{{ d.titre }}</span>
+      <span style="font-size:14px;color:var(--color-neutral-700)">{{ d.meta }}</span>
+    </a>
+  </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ vRecherche }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Recherche" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:16px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Recherche</h1>
+    <label style="display:grid;gap:6px;max-width:720px">
+      <span style="font-size:14px;color:var(--color-neutral-700)">Un coureur, une course, un village, une année</span>
+      <input type="search" value="{{ q }}" onChange="{{ onQ }}" placeholder="Genter, Mirabelle, Flanville…" style="width:100%;min-height:52px;padding:10px 14px;font:inherit;font-size:20px;color:var(--color-text);background:var(--color-surface);border:2px solid var(--color-divider);border-radius:0;caret-color:var(--color-accent)" style-focus="border-color:var(--color-accent);outline:none">
+    </label>
+    <span style="font-size:14px;color:var(--color-neutral-700)">{{ resTxt }}</span>
+  </div>
+  <sc-for list="{{ resultats }}" as="r" hint-placeholder-count="0">
+    <a href="{{ r.href }}" style="display:grid;gap:4px;padding:14px 0;border-top:2px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+      <span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">{{ r.type }} · {{ r.meta }}</span>
+      <span style="font-family:var(--font-heading);font-weight:800;font-size:19px">{{ r.titre }}</span>
+      <span style="max-width:90ch;font-size:15px;color:var(--color-neutral-800)">{{ r.texte }}</span>
+    </a>
+  </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ vIntrouvable }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1200px;margin:0 auto;padding:64px 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:40px;margin:0">Page introuvable</h1>
+    <a href="#/" style="font-weight:600">Retour à l'accueil →</a>
+  </div>
+</sc-if>
+</main>
+
+<sc-if value="{{ aLb }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ fermerLb }}" style="position:fixed;inset:0;z-index:50;background:color-mix(in srgb, var(--color-neutral-900) 94%, transparent);display:grid;grid-template-rows:auto 1fr auto;gap:12px;padding:16px 24px;color:var(--color-bg)">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+      <span style="font-size:14px">{{ lb.pos }}</span>
+      <button type="button" onClick="{{ fermerLb }}" style="padding:8px 14px;font:inherit;font-weight:800;font-size:14px;background:var(--color-bg);color:var(--color-text);border:0;cursor:pointer">Fermer</button>
+    </div>
+    <div style="display:grid;place-items:center;min-height:0">
+      <img src="{{ lb.fichier }}" alt="{{ lb.legende }}" onClick="{{ stop }}" style="max-width:100%;max-height:76vh;object-fit:contain">
+    </div>
+    <div onClick="{{ stop }}" style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px 24px">
+      <span style="font-size:15px;font-weight:600">{{ lb.legendeTxt }}</span>
+      <div style="display:flex;gap:2px">
+        <button type="button" onClick="{{ precLb }}" style="padding:10px 16px;font:inherit;font-weight:800;background:transparent;color:var(--color-bg);border:1px solid var(--color-bg);cursor:pointer">← Précédente</button>
+        <button type="button" onClick="{{ suivLb }}" style="padding:10px 16px;font:inherit;font-weight:800;background:transparent;color:var(--color-bg);border:1px solid var(--color-bg);cursor:pointer">Suivante →</button>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<footer style="border-top:2px solid var(--color-divider)">
+  <div style="max-width:1200px;margin:0 auto;padding:20px 24px 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:var(--color-neutral-700)">
+    <span>Team Cycliste Coincy Metz 3 · Coincy, Moselle · {{ debut }}–{{ fin }}</span>
+    <span>Textes et photos repris des sites du club, 2007–2020. <a href="{{ fbUrl }}" target="_blank" rel="noopener">Groupe Facebook</a></span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;pisteAccueil&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;frise&quot;, &quot;saisons&quot;, &quot;recherche&quot;], &quot;default&quot;: &quot;saisons&quot;, &quot;tsType&quot;: &quot;'frise' | 'saisons' | 'recherche'&quot;, &quot;section&quot;: &quot;Accueil&quot;}, &quot;facebookUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Facebook&quot;}}">
+class Component extends DCLogic {
+  state = { route: ['accueil'], club: null, medias: null, charge: false, q: '', anneePhotos: 'toutes', photo: -1, liste: 'photos' };
+
+  componentDidMount() {
+    this._hash = () => { this.setState({ route: this.lireRoute(), photo: -1 }); window.scrollTo(0, 0); };
+    this._key = (e) => {
+      if (this.state.photo < 0) return;
+      if (e.key === 'Escape') this.setState({ photo: -1 });
+      if (e.key === 'ArrowRight') this.decaler(1);
+      if (e.key === 'ArrowLeft') this.decaler(-1);
+    };
+    window.addEventListener('hashchange', this._hash);
+    window.addEventListener('keydown', this._key);
+    this.setState({ route: this.lireRoute() });
+    const get = (f) => fetch('donnees/' + f, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
+    Promise.all([get('club.json'), get('medias.json')]).then(([club, medias]) => this.setState({ club, medias, charge: true }));
+  }
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this._hash);
+    window.removeEventListener('keydown', this._key);
+  }
+  lireRoute() {
+    const h = (window.location.hash || '').replace(/^#\/?/, '').split('?')[0];
+    const p = h.split('/').filter(Boolean).map(decodeURIComponent);
+    return p.length ? p : ['accueil'];
+  }
+  friseRef = (el) => { this._frise = el; };
+  friseDown = (e) => {
+    const el = this._frise;
+    if (!el || e.button !== 0) return;
+    this._drag = { x: e.clientX, sl: el.scrollLeft, moved: false };
+    const move = (ev) => {
+      const dx = ev.clientX - this._drag.x;
+      if (Math.abs(dx) > 5) { this._drag.moved = true; el.style.cursor = 'grabbing'; }
+      el.scrollLeft = this._drag.sl - dx;
+    };
+    const up = () => {
+      el.style.cursor = 'grab';
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseup', up);
+      setTimeout(() => { if (this._drag) this._drag.moved = false; }, 0);
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+  friseClic = (e) => { if (this._drag && this._drag.moved) { e.preventDefault(); e.stopPropagation(); } };
+  friseDragStart = (e) => e.preventDefault();
+  friseDefiler = (sens) => () => { const el = this._frise; if (el) el.scrollBy({ left: sens * el.clientWidth * 0.8, behavior: 'smooth' }); };
+  decaler(d) {
+    const n = this._nb || 0;
+    if (n) this.setState(s => ({ photo: (s.photo + d + n) % n }));
+  }
+  norm(s) { return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  dateTxt(d) {
+    const M = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+    if (!d) return '';
+    const [y, m, j] = String(d).split('-');
+    if (j) return (+j === 1 ? '1er' : String(+j)) + ' ' + M[+m - 1] + ' ' + y;
+    if (m) return M[+m - 1] + ' ' + y;
+    return y;
+  }
+  dateCourte(d) { const [y, m, j] = String(d).split('-'); return j ? j + '/' + m + '/' + y : (m ? m + '/' + y : y); }
+  pl(n, s, p) { return n + ' ' + (n > 1 ? (p || s + 's') : s); }
+
+  renderVals() {
+    const s = this.state, route = s.route, vue = route[0];
+    const club = Object.assign({ chronologie: [], saisons: {}, coureurs: [], encadrement: [], courses: [], vie: [], sites: [], partenaires: [], videos: [], histoire: [], chiffres: [], fondation: 2000, fin: 2020 }, s.club || {});
+    const M = s.medias || {};
+    const debut = club.fondation, fin = club.fin;
+    const an = (d) => String(d || '').slice(0, 4);
+
+    const evts = club.chronologie.map(e => ({ ...e, annee: +an(e.date), dateTxt: this.dateTxt(e.date), dateCourte: this.dateCourte(e.date), href: '#/saison/' + an(e.date) }))
+      .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+
+    const courses = club.courses.map(c => {
+      const eds = (c.editions || []).slice().sort((a, b) => String(a.date).localeCompare(String(b.date)));
+      const premiere = an(eds[0] && eds[0].date), derniere = an(eds[eds.length - 1] && eds[eds.length - 1].date);
+      return {
+        ...c, href: '#/courses',
+        periode: premiere === derniere ? premiere : premiere + '–' + derniere + ' · ' + this.pl(eds.length, 'édition'),
+        editions: eds.map(e => ({
+          ...e, dateTxt: this.dateTxt(e.date), hrefAnnee: '#/saison/' + an(e.date),
+          titre: [e.numero ? e.numero + ' édition' : '', e.lieu, e.vainqueur ? 'vainqueur ' + e.vainqueur : ''].filter(Boolean).join(' · ') || 'Édition ' + an(e.date),
+          aNote: !!e.note
+        }))
+      };
+    });
+
+    let photosBrutes = M.photos;
+    if (!photosBrutes && Array.isArray(M.medias)) photosBrutes = M.medias.filter(m => m.type === 'image' && (m.octets || 0) >= 15000).map(m => ({ fichier: m.fichier, legende: '', annee: an(m.date) }));
+    const photos = (photosBrutes || []).map(p => ({ ...p, annee: String(p.annee || ''), legendeTxt: [p.legende, p.annee].filter(Boolean).join(' · ') }));
+    const documents = (M.documents || []).map(d => ({ ...d, meta: [((d.fichier.match(/\.([a-z0-9]+)$/i) || [])[1] || '').toUpperCase(), d.annee].filter(Boolean).join(' · ') }));
+    const vids = {};
+    club.videos.concat(M.videos || []).forEach(v => { const k = v.plateforme + ':' + v.id; vids[k] = Object.assign({}, v, vids[k] || {}); });
+    const videos = Object.values(vids).map(v => {
+      const dm = v.plateforme === 'dailymotion', nom = dm ? 'Dailymotion' : 'YouTube';
+      return { titre: v.titre || 'Vidéo', plateformeTxt: nom, embed: dm ? 'https://www.dailymotion.com/embed/video/' + v.id : 'https://www.youtube-nocookie.com/embed/' + v.id, lien: dm ? 'https://www.dailymotion.com/video/' + v.id : 'https://www.youtube.com/watch?v=' + v.id };
+    });
+
+    const ouvrirDans = (liste) => liste.map((m, i) => ({ ...m, ouvrir: () => this.setState({ photo: i, liste: vue }) }));
+    const annees = [];
+    for (let y = debut; y <= fin; y++) annees.push(y);
+    const saisons = annees.map(y => {
+      const x = club.saisons[y] || {}, ev = evts.filter(e => e.annee === y);
+      const stats = [x.victoires ? this.pl(x.victoires, 'victoire') : '', x.classement || ''].filter(Boolean).join(' · ');
+      return { annee: y, href: '#/saison/' + y, titres: ev.slice(0, 3), aPlus: ev.length > 3, plus: '+ ' + (ev.length - 3) + ' autres', resume: x.resume || (ev[0] && ev[0].titre) || '', actif: !!(x.resume || ev.length), stats, aStats: !!stats };
+    });
+
+    let sc = {}, listeLb = [];
+    if (vue === 'saison') {
+      const y = +route[1], x = club.saisons[y] || {};
+      const faits = [];
+      if (x.victoires) faits.push({ valeur: x.victoires, libelle: 'victoires' });
+      if (x.classement) faits.push({ valeur: x.classement.split(' ')[0], libelle: x.classement.split(' ').slice(1).join(' ') });
+      const eds = [];
+      courses.forEach(c => c.editions.filter(e => +an(e.date) === y).forEach(e => eds.push({ course: c.nom, href: '#/courses', ligne: [e.dateTxt, e.titre, e.note].filter(Boolean).join(' · ') })));
+      const ph = photos.filter(p => +p.annee === y);
+      listeLb = ph;
+      const ev = evts.filter(e => e.annee === y);
+      sc = {
+        annee: y, resume: x.resume || '', aPrec: y > debut, prec: '#/saison/' + (y - 1), anneePrec: y - 1, aSuiv: y < fin, suiv: '#/saison/' + (y + 1), anneeSuiv: y + 1,
+        faits, aFaits: faits.length > 0, titres: (x.titres || []).map(t => ({ t })), aTitres: !!(x.titres || []).length,
+        victoires: x.victoires_detail || [], aVictoires: !!(x.victoires_detail || []).length,
+        places: (x.places || []).map(t => ({ t })), aPlaces: !!(x.places || []).length,
+        evts: ev, aEvts: ev.length > 0, editions: eds, aEditions: eds.length > 0,
+        photos: ouvrirDans(ph), aPhotos: ph.length > 0
+      };
+    }
+
+    const anneesImg = Array.from(new Set(photos.map(p => p.annee).filter(Boolean))).sort();
+    const anneesPhotos = ['toutes'].concat(anneesImg).map(a => {
+      const actif = s.anneePhotos === a;
+      return { label: a === 'toutes' ? 'Toutes · ' + photos.length : a, actif, inactif: !actif, choisir: () => this.setState({ anneePhotos: a, photo: -1 }) };
+    });
+    const photosF = photos.filter(p => s.anneePhotos === 'toutes' || p.annee === s.anneePhotos);
+    if (vue === 'photos') listeLb = photosF;
+    this._nb = listeLb.length;
+    const lbM = s.photo >= 0 && s.liste === vue ? listeLb[s.photo] : null;
+
+    const coureurs = club.coureurs.map(c => ({ ...c, evts: evts.filter(e => e.coureur === c.id), aEvts: evts.some(e => e.coureur === c.id) }));
+
+    const nq = this.norm(s.q).trim();
+    const resultats = [];
+    if (nq.length >= 2) {
+      const ok = (...t) => this.norm(t.join(' ')).includes(nq);
+      evts.forEach(e => { if (ok(e.titre, e.texte, e.date)) resultats.push({ type: 'Chronologie', meta: e.dateTxt, titre: e.titre, texte: e.texte, href: e.href }); });
+      club.coureurs.forEach(c => { if (ok(c.nom, c.texte, c.role)) resultats.push({ type: 'Coureur', meta: c.periode || '', titre: c.nom, texte: c.texte, href: '#/coureurs' }); });
+      club.encadrement.forEach(p => { if (ok(p.nom, p.role, p.texte)) resultats.push({ type: 'Encadrement', meta: p.role, titre: p.nom, texte: p.texte, href: '#/coureurs' }); });
+      courses.forEach(c => {
+        if (ok(c.nom, c.lieu, c.texte)) resultats.push({ type: 'Course', meta: c.periode, titre: c.nom, texte: c.texte, href: '#/courses' });
+        c.editions.forEach(e => { if (ok(e.titre, e.note || '', e.date)) resultats.push({ type: c.nom, meta: e.dateTxt, titre: e.titre, texte: e.note || '', href: e.hrefAnnee }); });
+      });
+      Object.entries(club.saisons).forEach(([y, x]) => {
+        [].concat(x.titres || [], x.places || []).forEach(t => { if (ok(t, y)) resultats.push({ type: 'Saison', meta: y, titre: t, texte: '', href: '#/saison/' + y }); });
+        (x.victoires_detail || []).forEach(v => { if (ok(v.coureur, v.detail, y)) resultats.push({ type: 'Saison', meta: y, titre: v.coureur + ' : ' + this.pl(v.nombre, 'victoire'), texte: v.detail, href: '#/saison/' + y }); });
+      });
+      club.vie.forEach(v => { if (ok(v.titre, v.texte)) resultats.push({ type: 'Vie du club', meta: '', titre: v.titre, texte: v.texte, href: '#/vie' }); });
+    }
+    const choisirQ = (t) => () => this.setState({ q: t });
+    const suggestions = ['Romain Genter', 'Johan Boucher', 'Kévin Hamel', 'Mirabelle', 'Comogyre', 'Cyclo-cross', 'Péraud', 'Téléthon', '2008'].map(t => ({ label: t, choisir: choisirQ(t) }));
+
+    const navDef = [['accueil', 'Accueil', '#/'], ['histoire', 'Histoire'], ['saisons', 'Saisons'], ['coureurs', 'Coureurs'], ['courses', 'Courses'], ['vie', 'Vie du club'], ['photos', 'Photos']];
+    if (documents.length) navDef.push(['documents', 'Documents']);
+    const nav = navDef.map(([id, label, href]) => { const actif = vue === id || (id === 'saisons' && vue === 'saison'); return { label, href: href || '#/' + id, actif, inactif: !actif }; });
+    const vues = ['accueil', 'histoire', 'saisons', 'saison', 'coureurs', 'courses', 'vie', 'photos', 'documents', 'recherche'];
+    const piste = this.props.pisteAccueil ?? 'saisons';
+
+    return {
+      debut, fin, nav, accroche: club.accroche || '', chiffres: club.chiffres,
+      fbUrl: this.props.facebookUrl || club.facebook || 'https://www.facebook.com/search/top?q=' + encodeURIComponent('TC Coincy Metz 3'),
+      partageFb: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(typeof window !== 'undefined' ? window.location.href : ''),
+      friseRef: this.friseRef, friseDown: this.friseDown, friseClic: this.friseClic, friseDragStart: this.friseDragStart,
+      frisePrec: this.friseDefiler(-1), friseSuiv: this.friseDefiler(1),
+      saisons, courses, coureurs, encadrement: club.encadrement, effectif2008: club.effectif_2008 || '',
+      histoire: club.histoire.map(t => ({ t })), sites: club.sites,
+      chronoAnnees: annees.map(y => ({ annee: y, href: '#/saison/' + y, evts: evts.filter(e => e.annee === y) })).filter(a => a.evts.length),
+      vie: club.vie, partenaires: club.partenaires.map(t => ({ t })),
+      photosUne: photos.slice(0, 4), aPhotosUne: photos.length >= 4,
+      photos: ouvrirDans(photosF), photosVide: photos.length === 0, anneesPhotos, aAnneesPhotos: anneesImg.length > 1,
+      videos, aVideos: videos.length > 0, documents,
+      aLb: !!lbM, lb: lbM ? { ...lbM, pos: (s.photo + 1) + ' / ' + listeLb.length } : {},
+      fermerLb: () => this.setState({ photo: -1 }),
+      precLb: (e) => { e.stopPropagation(); this.decaler(-1); },
+      suivLb: (e) => { e.stopPropagation(); this.decaler(1); },
+      stop: (e) => e.stopPropagation(),
+      sc,
+      q: s.q, onQ: (e) => this.setState({ q: e.target.value }), suggestions,
+      resultats: resultats.slice(0, 80), resultatsCourts: resultats.slice(0, 6), resPlus: resultats.length > 6, resultatsN: resultats.length,
+      aRecherche: nq.length >= 2, resTxt: nq.length < 2 ? 'Tapez au moins deux lettres.' : this.pl(resultats.length, 'résultat'),
+      erreurChargement: s.charge && !s.club,
+      vAccueil: vue === 'accueil', vHistoire: vue === 'histoire', vSaisons: vue === 'saisons', vSaison: vue === 'saison',
+      vCoureurs: vue === 'coureurs', vCourses: vue === 'courses', vVie: vue === 'vie', vPhotos: vue === 'photos',
+      vDocs: vue === 'documents', vRecherche: vue === 'recherche', vIntrouvable: !vues.includes(vue),
+      pFrise: piste === 'frise', pSaisons: piste === 'saisons', pRecherche: piste === 'recherche'
+    };
+  }
+}
+</script>
+</body>
+</html>
