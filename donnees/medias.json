@@ -1,205 +1,570 @@
 {
  "photos": [
   {
-   "fichier": "medias/photos/2013-accueil.gif",
-   "legende": "Accueil",
+   "fichier": "medias/photos/sans-date-le-club-photo-du-groupe-facebook-2.jpg",
+   "legende": "Le club, photo du groupe Facebook",
+   "annee": ""
+  },
+  {
+   "fichier": "medias/photos/sans-date-le-club-photo-du-groupe-facebook-3.jpg",
+   "legende": "Le club, photo du groupe Facebook",
+   "annee": ""
+  },
+  {
+   "fichier": "medias/photos/sans-date-le-club-photo-du-groupe-facebook.jpg",
+   "legende": "Le club, photo du groupe Facebook",
+   "annee": ""
+  },
+  {
+   "fichier": "medias/photos/sans-date-le-club-recherche-deux-coureurs-annonce-proshootin.jpg",
+   "legende": "Le club recherche deux coureurs (annonce ProShooting)",
+   "annee": ""
+  },
+  {
+   "fichier": "medias/photos/2011-no-photo-description-available.jpg",
+   "legende": "No photo description available.",
+   "annee": "2011"
+  },
+  {
+   "fichier": "medias/photos/2012-grand-prix-d-amneville-photo-proshooting-2.jpg",
+   "legende": "Grand Prix d'Amnéville (photo ProShooting)",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-grand-prix-d-amneville-photo-proshooting-3.jpg",
+   "legende": "Grand Prix d'Amnéville (photo ProShooting)",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-grand-prix-d-amneville-photo-proshooting-4.jpg",
+   "legende": "Grand Prix d'Amnéville (photo ProShooting)",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-grand-prix-d-amneville-photo-proshooting.jpg",
+   "legende": "Grand Prix d'Amnéville (photo ProShooting)",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-la-galette-2012.jpg",
+   "legende": "La galette 2012",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-no-photo-description-available.jpg",
+   "legende": "No photo description available.",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-soiree-beaujolais-2012-2.jpg",
+   "legende": "Soirée Beaujolais 2012",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-soiree-beaujolais-2012-3.jpg",
+   "legende": "Soirée Beaujolais 2012",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-soiree-beaujolais-2012-4.jpg",
+   "legende": "Soirée Beaujolais 2012",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2012-soiree-beaujolais-2012.jpg",
+   "legende": "Soirée Beaujolais 2012",
+   "annee": "2012"
+  },
+  {
+   "fichier": "medias/photos/2013-banniere-du-groupe-facebook-dessinee-par-arnaud.jpg",
+   "legende": "Bannière du groupe Facebook dessinée par Arnaud",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--2.jpg",
-   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/photos/2013-la-voiture-du-club-refaite-aux-couleurs-du-tccm3-2.jpg",
+   "legende": "La voiture du club, refaite aux couleurs du TCCM3",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--3.jpg",
-   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/photos/2013-la-voiture-du-club-refaite-aux-couleurs-du-tccm3.jpg",
+   "legende": "La voiture du club, refaite aux couleurs du TCCM3",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-cyclisme-velo-club-coincy-metz-web-tv-competition-.jpg",
-   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/photos/2013-les-jeunes-du-telethon-2013-a-coincy.jpg",
+   "legende": "Les jeunes du Téléthon 2013 à Coincy",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-cyclisme-velo-coincy-metz-web-tv-coupures-presse-2.jpg",
-   "legende": "cyclisme vélo Coincy Metz web tv coupures presse",
+   "fichier": "medias/photos/2013-sans-titre-2.jpg",
+   "legende": "",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-cyclisme-velo-coincy-metz-web-tv-coupures-presse-3.jpg",
-   "legende": "cyclisme vélo Coincy Metz web tv coupures presse",
+   "fichier": "medias/photos/2013-sans-titre-3.jpg",
+   "legende": "",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-cyclisme-velo-coincy-metz-web-tv-coupures-presse.jpg",
-   "legende": "cyclisme vélo Coincy Metz web tv coupures presse",
+   "fichier": "medias/photos/2013-sans-titre-4.jpg",
+   "legende": "",
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2014-tc-coincy-metz-3-menus.jpg",
-   "legende": "TC Coincy Metz 3 » Menus",
+   "fichier": "medias/photos/2013-sans-titre-5.jpg",
+   "legende": "",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-sans-titre-6.jpg",
+   "legende": "",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-sans-titre.gif",
+   "legende": "",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-sans-titre.jpg",
+   "legende": "",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-telethon-2013-a-coincy-les-parcours-route-vtt-et-m.jpg",
+   "legende": "Téléthon 2013 à Coincy, les parcours route, VTT et marche",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2014-les-tenues-2014-du-club.jpg",
+   "legende": "Les tenues 2014 du club",
    "annee": "2014"
   },
   {
-   "fichier": "medias/photos/2014-tc-coincy-metz-3-menus.png",
-   "legende": "TC Coincy Metz 3 » Menus",
+   "fichier": "medias/photos/2014-sans-titre.jpg",
+   "legende": "",
    "annee": "2014"
   },
   {
-   "fichier": "medias/photos/2015-equipe-staff.png",
-   "legende": "Equipe Staff",
+   "fichier": "medias/photos/2014-sans-titre.png",
+   "legende": "",
+   "annee": "2014"
+  },
+  {
+   "fichier": "medias/photos/2014-telethon-2014-a-coincy-l-affiche.jpg",
+   "legende": "Téléthon 2014 à Coincy, l'affiche",
+   "annee": "2014"
+  },
+  {
+   "fichier": "medias/photos/2015-grand-prix-de-bazoncourt-pays-de-pange-2.jpg",
+   "legende": "Grand Prix de Bazoncourt, Pays de Pange",
    "annee": "2015"
   },
   {
-   "fichier": "medias/photos/2016-archives-coincy-cyclo-sport-2007-2008-tc-coincy-me.jpg",
-   "legende": "Archives Coincy Cyclo Sport 2007-2008 – TC Coincy Metz 3",
+   "fichier": "medias/photos/2015-grand-prix-de-bazoncourt-pays-de-pange-3.jpg",
+   "legende": "Grand Prix de Bazoncourt, Pays de Pange",
+   "annee": "2015"
+  },
+  {
+   "fichier": "medias/photos/2015-grand-prix-de-bazoncourt-pays-de-pange-4.jpg",
+   "legende": "Grand Prix de Bazoncourt, Pays de Pange",
+   "annee": "2015"
+  },
+  {
+   "fichier": "medias/photos/2015-grand-prix-de-bazoncourt-pays-de-pange-5.jpg",
+   "legende": "Grand Prix de Bazoncourt, Pays de Pange",
+   "annee": "2015"
+  },
+  {
+   "fichier": "medias/photos/2015-grand-prix-de-bazoncourt-pays-de-pange.jpg",
+   "legende": "Grand Prix de Bazoncourt, Pays de Pange",
+   "annee": "2015"
+  },
+  {
+   "fichier": "medias/photos/2015-grand-prix-du-pays-de-pange-dans-le-republicain-lo.jpg",
+   "legende": "Grand Prix du Pays de Pange dans le Républicain lorrain",
+   "annee": "2015"
+  },
+  {
+   "fichier": "medias/photos/2015-grand-prix-du-pays-de-pange-l-affiche.jpg",
+   "legende": "Grand Prix du Pays de Pange, l'affiche",
+   "annee": "2015"
+  },
+  {
+   "fichier": "medias/photos/2016-5e-grand-prix-de-la-comogyre-a-ogy-photo-eric-legr-2.jpg",
+   "legende": "5e Grand Prix de la Comogyre à Ogy (photo Éric Legrand)",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-assemblee-generale-galette-des-rois-2016.jpg",
-   "legende": "Assemblée générale – Galette des rois 2016",
+   "fichier": "medias/photos/2016-5e-grand-prix-de-la-comogyre-a-ogy-photo-eric-legr-3.jpg",
+   "legende": "5e Grand Prix de la Comogyre à Ogy (photo Éric Legrand)",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-cyclisme-velo-club-coincy-metz-web-tv-competition-.jpg",
-   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/photos/2016-5e-grand-prix-de-la-comogyre-a-ogy-photo-eric-legr-4.jpg",
+   "legende": "5e Grand Prix de la Comogyre à Ogy (photo Éric Legrand)",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-inscriptions-au-club-et-licences-ffc-2016.jpg",
-   "legende": "Inscriptions au club et licences FFC 2016",
+   "fichier": "medias/photos/2016-5e-grand-prix-de-la-comogyre-a-ogy-photo-eric-legr-5.jpg",
+   "legende": "5e Grand Prix de la Comogyre à Ogy (photo Éric Legrand)",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-nos-motivations-2.jpg",
-   "legende": "Nos motivations",
+   "fichier": "medias/photos/2016-5e-grand-prix-de-la-comogyre-a-ogy-photo-eric-legr.jpg",
+   "legende": "5e Grand Prix de la Comogyre à Ogy (photo Éric Legrand)",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-nos-motivations-3.jpg",
-   "legende": "Nos motivations",
+   "fichier": "medias/photos/2016-assemblee-generale-du-club.jpg",
+   "legende": "Assemblée générale du club",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-nos-motivations-4.jpg",
-   "legende": "Nos motivations",
+   "fichier": "medias/photos/2016-assemblee-generale-et-galette-des-rois.jpg",
+   "legende": "Assemblée générale et galette des rois",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-nos-motivations.jpg",
-   "legende": "Nos motivations",
+   "fichier": "medias/photos/2016-grand-prix-de-la-comogyre-julien-masson-bruno-char-2.jpg",
+   "legende": "Grand Prix de la Comogyre : Julien Masson, Bruno Chardon, Steve Chainel (photo Jessica Cla",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-photo-de-la-galette-de-2012.jpg",
-   "legende": "Photo de la galette de 2012",
+   "fichier": "medias/photos/2016-grand-prix-de-la-comogyre-julien-masson-bruno-char-3.jpg",
+   "legende": "Grand Prix de la Comogyre : Julien Masson, Bruno Chardon, Steve Chainel (photo Jessica Cla",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-presentation-du-club.jpg",
-   "legende": "Présentation du club",
+   "fichier": "medias/photos/2016-grand-prix-de-la-comogyre-julien-masson-bruno-char-4.jpg",
+   "legende": "Grand Prix de la Comogyre : Julien Masson, Bruno Chardon, Steve Chainel (photo Jessica Cla",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-presse-2.jpg",
-   "legende": "Presse",
+   "fichier": "medias/photos/2016-grand-prix-de-la-comogyre-julien-masson-bruno-char-5.jpg",
+   "legende": "Grand Prix de la Comogyre : Julien Masson, Bruno Chardon, Steve Chainel (photo Jessica Cla",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-presse-3.jpg",
-   "legende": "Presse",
+   "fichier": "medias/photos/2016-grand-prix-de-la-comogyre-julien-masson-bruno-char.jpg",
+   "legende": "Grand Prix de la Comogyre : Julien Masson, Bruno Chardon, Steve Chainel (photo Jessica Cla",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-presse.jpg",
-   "legende": "Presse",
+   "fichier": "medias/photos/2016-l-affiche-du-5e-grand-prix-de-la-comogyre.jpg",
+   "legende": "L'affiche du 5e Grand Prix de la Comogyre",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-tc-coincy-metz-3-site-de-lequipe-cycliste-tccm3-2.jpg",
-   "legende": "TC Coincy Metz 3 – Site de l’équipe cycliste TCCM3",
+   "fichier": "medias/photos/2016-sans-titre-10.jpg",
+   "legende": "",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-tc-coincy-metz-3-site-de-lequipe-cycliste-tccm3.jpg",
-   "legende": "TC Coincy Metz 3 – Site de l’équipe cycliste TCCM3",
+   "fichier": "medias/photos/2016-sans-titre-11.jpg",
+   "legende": "",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-telethon-2014.jpg",
-   "legende": "Téléthon 2014",
+   "fichier": "medias/photos/2016-sans-titre-12.jpg",
+   "legende": "",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2017-archives-coincy-cyclo-sport-2007-2008-tc-coincy-me.jpg",
-   "legende": "Archives Coincy Cyclo Sport 2007-2008 – TC Coincy Metz 3",
+   "fichier": "medias/photos/2016-sans-titre-13.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-14.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-15.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-16.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-2.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-3.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-4.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-5.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-6.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-7.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-8.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre-9.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-sans-titre.jpg",
+   "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-championnat-de-2.jpg",
+   "legende": "6e Grand Prix d'Ogy–Montoy-Flanville, championnat de Moselle (photo Arnaud S.)",
    "annee": "2017"
   },
   {
-   "fichier": "medias/photos/2018-partenariats-et-engagements.jpg",
-   "legende": "Partenariats et engagements",
+   "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-championnat-de-3.jpg",
+   "legende": "6e Grand Prix d'Ogy–Montoy-Flanville, championnat de Moselle (photo Arnaud S.)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-championnat-de-4.jpg",
+   "legende": "6e Grand Prix d'Ogy–Montoy-Flanville, championnat de Moselle (photo Arnaud S.)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-championnat-de-5.jpg",
+   "legende": "6e Grand Prix d'Ogy–Montoy-Flanville, championnat de Moselle (photo Arnaud S.)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-championnat-de.jpg",
+   "legende": "6e Grand Prix d'Ogy–Montoy-Flanville, championnat de Moselle (photo Arnaud S.)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-dans-le-republ.jpg",
+   "legende": "6e Grand Prix d'Ogy–Montoy-Flanville dans le Républicain lorrain",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-au-2.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Aurélie Tscheiller)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-au-3.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Aurélie Tscheiller)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-au-4.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Aurélie Tscheiller)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-au-5.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Aurélie Tscheiller)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-au.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Aurélie Tscheiller)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-je-2.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Jessica Claudel)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-je-3.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Jessica Claudel)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-je-4.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Jessica Claudel)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-je-5.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Jessica Claudel)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-de-moselle-a-montoy-flanville-photo-je.jpg",
+   "legende": "Championnat de Moselle à Montoy-Flanville (photo Jessica Claudel)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-du-monde-de-cyclo-cross-2017-photo-pro-2.jpg",
+   "legende": "Championnat du monde de cyclo-cross 2017 (photo ProShooting)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-du-monde-de-cyclo-cross-2017-photo-pro-3.jpg",
+   "legende": "Championnat du monde de cyclo-cross 2017 (photo ProShooting)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-du-monde-de-cyclo-cross-2017-photo-pro-4.jpg",
+   "legende": "Championnat du monde de cyclo-cross 2017 (photo ProShooting)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-du-monde-de-cyclo-cross-2017-photo-pro-5.jpg",
+   "legende": "Championnat du monde de cyclo-cross 2017 (photo ProShooting)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-championnat-du-monde-de-cyclo-cross-2017-photo-pro.jpg",
+   "legende": "Championnat du monde de cyclo-cross 2017 (photo ProShooting)",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-l-affiche-du-championnat-de-moselle-organise-par-l.jpg",
+   "legende": "L'affiche du championnat de Moselle organisé par le club",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-sans-titre.jpg",
+   "legende": "",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2018-sans-titre-2.jpg",
+   "legende": "",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2018-partenariats-et-engagements.png",
-   "legende": "Partenariats et engagements",
+   "fichier": "medias/photos/2018-sans-titre-3.jpg",
+   "legende": "",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2018-trophee-des-crapauds-2017.jpg",
-   "legende": "Trophée des Crapauds 2017",
+   "fichier": "medias/photos/2018-sans-titre.jpg",
+   "legende": "",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2018-un-tres-long-periple.jpg",
-   "legende": "Un très long périple",
+   "fichier": "medias/photos/2018-sans-titre.png",
+   "legende": "",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2026-equipes.gif",
-   "legende": "Equipes",
+   "fichier": "medias/photos/2019-la-grande-etape-de-noel.jpg",
+   "legende": "La grande étape de Noël",
+   "annee": "2019"
+  },
+  {
+   "fichier": "medias/photos/2020-championnat-du-grand-est-la-liste-des-engages.png",
+   "legende": "Championnat du Grand Est, la liste des engagés",
+   "annee": "2020"
+  },
+  {
+   "fichier": "medias/photos/2020-les-nouvelles-tenues-du-club-2.jpg",
+   "legende": "Les nouvelles tenues du club",
+   "annee": "2020"
+  },
+  {
+   "fichier": "medias/photos/2020-les-nouvelles-tenues-du-club-3.jpg",
+   "legende": "Les nouvelles tenues du club",
+   "annee": "2020"
+  },
+  {
+   "fichier": "medias/photos/2020-les-nouvelles-tenues-du-club-4.jpg",
+   "legende": "Les nouvelles tenues du club",
+   "annee": "2020"
+  },
+  {
+   "fichier": "medias/photos/2020-les-nouvelles-tenues-du-club.jpg",
+   "legende": "Les nouvelles tenues du club",
+   "annee": "2020"
+  },
+  {
+   "fichier": "medias/photos/2021-championnats-de-france-2021-a-epinal.jpg",
+   "legende": "Championnats de France 2021 à Épinal",
+   "annee": "2021"
+  },
+  {
+   "fichier": "medias/photos/2025-preparatifs-de-la-sortie-en-angleterre-2.jpg",
+   "legende": "Préparatifs de la sortie en Angleterre",
+   "annee": "2025"
+  },
+  {
+   "fichier": "medias/photos/2025-preparatifs-de-la-sortie-en-angleterre.jpg",
+   "legende": "Préparatifs de la sortie en Angleterre",
+   "annee": "2025"
+  },
+  {
+   "fichier": "medias/photos/2026-sans-titre-2.jpg",
+   "legende": "",
    "annee": "2026"
   },
   {
    "fichier": "medias/photos/2026-sans-titre.gif",
    "legende": "",
    "annee": "2026"
+  },
+  {
+   "fichier": "medias/photos/2026-sans-titre.jpg",
+   "legende": "",
+   "annee": "2026"
   }
  ],
  "documents": [
   {
-   "fichier": "medias/documents/2013-cyclisme-velo-club-coincy-metz-web-tv-competition-.doc",
-   "titre": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/documents/2013-parcours-20marche-205-100km-doc.doc",
+   "titre": "parcours%20marche%205,100km.doc",
    "annee": "2013"
   },
   {
-   "fichier": "medias/documents/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--2.doc",
-   "titre": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/documents/2013-parcours-20route-2018km-doc.doc",
+   "titre": "parcours%20route%2018km.doc",
    "annee": "2013"
   },
   {
-   "fichier": "medias/documents/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--3.doc",
-   "titre": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/documents/2013-parcours-20vtt-2012km-doc.doc",
+   "titre": "parcours%20vtt%2012km.doc",
    "annee": "2013"
   },
   {
-   "fichier": "medias/documents/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--4.doc",
-   "titre": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "fichier": "medias/documents/2013-parcours-20vtt-2020km-doc.doc",
+   "titre": "parcours%20vtt%2020km.doc",
    "annee": "2013"
   },
   {
-   "fichier": "medias/documents/2015-cyclisme-velo-coincy-metz-web-tv-presentation-club.doc",
-   "titre": "cyclisme vélo Coincy Metz web tv présentation club",
+   "fichier": "medias/documents/2015-rapport-moral-activite-2010-2011-doc.doc",
+   "titre": "rapport_moral_activite_2010_2011.doc",
    "annee": "2015"
   },
   {
-   "fichier": "medias/documents/2016-infos-pratiques.doc",
-   "titre": "Infos pratiques",
+   "fichier": "medias/documents/2016-7-promotion-et-d-c3-a9couverte-docx.docx",
+   "titre": "7.Promotion-et-d%C3%A9couverte.docx",
    "annee": "2016"
   },
   {
-   "fichier": "medias/documents/2016-presse.docx",
-   "titre": "Presse",
+   "fichier": "medias/documents/2016-r-c3-a8glement-int-c3-a9rieur-doc.doc",
+   "titre": "R%C3%A8glement-int%C3%A9rieur.doc",
    "annee": "2016"
   },
   {
@@ -222,37 +587,37 @@
   {
    "plateforme": "dailymotion",
    "id": "x5jf3v",
-   "titre": "Page d'accueil",
+   "titre": "",
    "annee": ""
   },
   {
    "plateforme": "dailymotion",
    "id": "xmel81",
-   "titre": "TC Coincy Metz 3 » Présentation",
+   "titre": "",
    "annee": ""
   },
   {
    "plateforme": "dailymotion",
    "id": "xpkvay",
-   "titre": "Vidéo du Grand Prix de la Comogyre à Coincy en 2012 – TC Coincy Metz 3",
+   "titre": "",
    "annee": ""
   },
   {
    "plateforme": "youtube",
    "id": "ShD4hf1vAyM",
-   "titre": "Actualités",
+   "titre": "",
    "annee": ""
   },
   {
    "plateforme": "youtube",
    "id": "egX0ccJLHY8",
-   "titre": "Le petit dej des champions",
+   "titre": "",
    "annee": ""
   },
   {
    "plateforme": "youtube",
    "id": "WrSlCxP6u4k",
-   "titre": "Actualités",
+   "titre": "",
    "annee": ""
   }
  ]
