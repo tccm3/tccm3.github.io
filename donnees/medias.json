@@ -76,8 +76,43 @@
    "annee": "2012"
   },
   {
+   "fichier": "medias/photos/2013-accueil.gif",
+   "legende": "Accueil",
+   "annee": "2013"
+  },
+  {
    "fichier": "medias/photos/2013-banniere-du-groupe-facebook-dessinee-par-arnaud.jpg",
    "legende": "Bannière du groupe Facebook dessinée par Arnaud",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--2.jpg",
+   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-cyclisme-velo-club-coincy-metz-web-tv-competition--3.jpg",
+   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-cyclisme-velo-club-coincy-metz-web-tv-competition-.jpg",
+   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-cyclisme-velo-coincy-metz-web-tv-coupures-presse-2.jpg",
+   "legende": "cyclisme vélo Coincy Metz web tv coupures presse",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-cyclisme-velo-coincy-metz-web-tv-coupures-presse-3.jpg",
+   "legende": "cyclisme vélo Coincy Metz web tv coupures presse",
+   "annee": "2013"
+  },
+  {
+   "fichier": "medias/photos/2013-cyclisme-velo-coincy-metz-web-tv-coupures-presse.jpg",
+   "legende": "cyclisme vélo Coincy Metz web tv coupures presse",
    "annee": "2013"
   },
   {
@@ -96,41 +131,6 @@
    "annee": "2013"
   },
   {
-   "fichier": "medias/photos/2013-sans-titre-2.jpg",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
-   "fichier": "medias/photos/2013-sans-titre-3.jpg",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
-   "fichier": "medias/photos/2013-sans-titre-4.jpg",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
-   "fichier": "medias/photos/2013-sans-titre-5.jpg",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
-   "fichier": "medias/photos/2013-sans-titre-6.jpg",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
-   "fichier": "medias/photos/2013-sans-titre.gif",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
-   "fichier": "medias/photos/2013-sans-titre.jpg",
-   "legende": "",
-   "annee": "2013"
-  },
-  {
    "fichier": "medias/photos/2013-telethon-2013-a-coincy-les-parcours-route-vtt-et-m.jpg",
    "legende": "Téléthon 2013 à Coincy, les parcours route, VTT et marche",
    "annee": "2013"
@@ -141,19 +141,24 @@
    "annee": "2014"
   },
   {
-   "fichier": "medias/photos/2014-sans-titre.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2014-tc-coincy-metz-3-menus.jpg",
+   "legende": "TC Coincy Metz 3 » Menus",
    "annee": "2014"
   },
   {
-   "fichier": "medias/photos/2014-sans-titre.png",
-   "legende": "",
+   "fichier": "medias/photos/2014-tc-coincy-metz-3-menus.png",
+   "legende": "TC Coincy Metz 3 » Menus",
    "annee": "2014"
   },
   {
    "fichier": "medias/photos/2014-telethon-2014-a-coincy-l-affiche.jpg",
    "legende": "Téléthon 2014 à Coincy, l'affiche",
    "annee": "2014"
+  },
+  {
+   "fichier": "medias/photos/2015-equipe-staff.png",
+   "legende": "Equipe Staff",
+   "annee": "2015"
   },
   {
    "fichier": "medias/photos/2015-grand-prix-de-bazoncourt-pays-de-pange-2.jpg",
@@ -216,6 +221,11 @@
    "annee": "2016"
   },
   {
+   "fichier": "medias/photos/2016-archives-coincy-cyclo-sport-2007-2008-tc-coincy-me.jpg",
+   "legende": "Archives Coincy Cyclo Sport 2007-2008 – TC Coincy Metz 3",
+   "annee": "2016"
+  },
+  {
    "fichier": "medias/photos/2016-assemblee-generale-du-club.jpg",
    "legende": "Assemblée générale du club",
    "annee": "2016"
@@ -223,6 +233,16 @@
   {
    "fichier": "medias/photos/2016-assemblee-generale-et-galette-des-rois.jpg",
    "legende": "Assemblée générale et galette des rois",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-assemblee-generale-galette-des-rois-2016.jpg",
+   "legende": "Assemblée générale – Galette des rois 2016",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-cyclisme-velo-club-coincy-metz-web-tv-competition-.jpg",
+   "legende": "cyclisme vélo club Coincy Metz web tv compétition compétitions",
    "annee": "2016"
   },
   {
@@ -251,43 +271,48 @@
    "annee": "2016"
   },
   {
+   "fichier": "medias/photos/2016-inscriptions-au-club-et-licences-ffc-2016.jpg",
+   "legende": "Inscriptions au club et licences FFC 2016",
+   "annee": "2016"
+  },
+  {
    "fichier": "medias/photos/2016-l-affiche-du-5e-grand-prix-de-la-comogyre.jpg",
    "legende": "L'affiche du 5e Grand Prix de la Comogyre",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-10.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-nos-motivations-2.jpg",
+   "legende": "Nos motivations",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-11.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-nos-motivations.jpg",
+   "legende": "Nos motivations",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-12.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-photo-de-la-galette-de-2012.jpg",
+   "legende": "Photo de la galette de 2012",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-13.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-presentation-du-club.jpg",
+   "legende": "Présentation du club",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-14.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-presse-2.jpg",
+   "legende": "Presse",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-15.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-presse-3.jpg",
+   "legende": "Presse",
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-16.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2016-presse.jpg",
+   "legende": "Presse",
    "annee": "2016"
   },
   {
@@ -306,33 +331,23 @@
    "annee": "2016"
   },
   {
-   "fichier": "medias/photos/2016-sans-titre-5.jpg",
-   "legende": "",
-   "annee": "2016"
-  },
-  {
-   "fichier": "medias/photos/2016-sans-titre-6.jpg",
-   "legende": "",
-   "annee": "2016"
-  },
-  {
-   "fichier": "medias/photos/2016-sans-titre-7.jpg",
-   "legende": "",
-   "annee": "2016"
-  },
-  {
-   "fichier": "medias/photos/2016-sans-titre-8.jpg",
-   "legende": "",
-   "annee": "2016"
-  },
-  {
-   "fichier": "medias/photos/2016-sans-titre-9.jpg",
-   "legende": "",
-   "annee": "2016"
-  },
-  {
    "fichier": "medias/photos/2016-sans-titre.jpg",
    "legende": "",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-tc-coincy-metz-3-site-de-lequipe-cycliste-tccm3-2.jpg",
+   "legende": "TC Coincy Metz 3 – Site de l’équipe cycliste TCCM3",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-tc-coincy-metz-3-site-de-lequipe-cycliste-tccm3.jpg",
+   "legende": "TC Coincy Metz 3 – Site de l’équipe cycliste TCCM3",
+   "annee": "2016"
+  },
+  {
+   "fichier": "medias/photos/2016-telethon-2014.jpg",
+   "legende": "Téléthon 2014",
    "annee": "2016"
   },
   {
@@ -363,6 +378,11 @@
   {
    "fichier": "medias/photos/2017-6e-grand-prix-d-ogymontoy-flanville-dans-le-republ.jpg",
    "legende": "6e Grand Prix d'Ogy–Montoy-Flanville dans le Républicain lorrain",
+   "annee": "2017"
+  },
+  {
+   "fichier": "medias/photos/2017-archives-coincy-cyclo-sport-2007-2008-tc-coincy-me.jpg",
+   "legende": "Archives Coincy Cyclo Sport 2007-2008 – TC Coincy Metz 3",
    "annee": "2017"
   },
   {
@@ -446,28 +466,23 @@
    "annee": "2017"
   },
   {
-   "fichier": "medias/photos/2017-sans-titre.jpg",
-   "legende": "",
-   "annee": "2017"
-  },
-  {
-   "fichier": "medias/photos/2018-sans-titre-2.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2018-partenariats-et-engagements.jpg",
+   "legende": "Partenariats et engagements",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2018-sans-titre-3.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2018-partenariats-et-engagements.png",
+   "legende": "Partenariats et engagements",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2018-sans-titre.jpg",
-   "legende": "",
+   "fichier": "medias/photos/2018-trophee-des-crapauds-2017.jpg",
+   "legende": "Trophée des Crapauds 2017",
    "annee": "2018"
   },
   {
-   "fichier": "medias/photos/2018-sans-titre.png",
-   "legende": "",
+   "fichier": "medias/photos/2018-un-tres-long-periple.jpg",
+   "legende": "Un très long périple",
    "annee": "2018"
   },
   {
@@ -516,6 +531,11 @@
    "annee": "2025"
   },
   {
+   "fichier": "medias/photos/2026-equipes.gif",
+   "legende": "Equipes",
+   "annee": "2026"
+  },
+  {
    "fichier": "medias/photos/2026-sans-titre-2.jpg",
    "legende": "",
    "annee": "2026"
@@ -553,8 +573,8 @@
    "annee": "2013"
   },
   {
-   "fichier": "medias/documents/2015-rapport-moral-activite-2010-2011-doc.doc",
-   "titre": "rapport_moral_activite_2010_2011.doc",
+   "fichier": "medias/documents/2015-cyclisme-velo-coincy-metz-web-tv-presentation-club.doc",
+   "titre": "cyclisme vélo Coincy Metz web tv présentation club",
    "annee": "2015"
   },
   {
