@@ -9,8 +9,8 @@
 <x-dc>
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Team Cycliste Coincy Metz 3 — 2000-2020</title>
-<meta name="description" content="Histoire du Team Cycliste Coincy Metz 3 (ex-Coincy Cyclo Sport), club cycliste de Coincy, Moselle, de 2000 à 2020.">
+<title>Team Cycliste Coincy Metz 3 — depuis 2000</title>
+<meta name="description" content="Histoire et palmarès du Team Cycliste Coincy Metz 3 (ex-Coincy Cyclo Sport), club cycliste de Coincy, Moselle, fondé en 2000.">
 <link rel="stylesheet" href="assets/modernist.css">
 <style>
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)}
@@ -24,7 +24,7 @@ a:hover{color:var(--color-accent)}
   <div style="max-width:1200px;margin:0 auto;padding:16px 24px 0;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px">
     <a href="#/" style="text-decoration:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
       <span style="font-family:var(--font-heading);font-weight:800;font-size:21px;letter-spacing:-0.01em">TC Coincy Metz 3</span>
-      <span style="font-size:14px;color:var(--color-neutral-700)">{{ debut }}–{{ fin }}</span>
+      <span style="font-size:14px;color:var(--color-neutral-700)">{{ periodeTxt }}</span>
     </a>
     <div style="display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14px;font-weight:600">
       <a href="#/recherche" style="color:var(--color-accent-700)">Rechercher</a>
@@ -52,7 +52,7 @@ a:hover{color:var(--color-accent)}
 <sc-if value="{{ vAccueil }}" hint-placeholder-val="{{ true }}">
 <div data-screen-label="Accueil">
   <section style="max-width:1200px;margin:0 auto;padding:56px 24px 40px;display:grid;gap:22px">
-    <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Club cycliste de Coincy, Moselle · {{ debut }}–{{ fin }}</div>
+    <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Club cycliste de Coincy, Moselle · {{ periodeTxt }}</div>
     <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(46px,8vw,112px);line-height:0.92;letter-spacing:-0.035em;margin:0;max-width:12ch">Team Cycliste Coincy Metz 3</h1>
     <p style="margin:0;max-width:60ch;font-size:20px;line-height:1.5;text-wrap:pretty">{{ accroche }}</p>
   </section>
@@ -93,12 +93,17 @@ a:hover{color:var(--color-accent)}
   <sc-if value="{{ pSaisons }}" hint-placeholder-val="{{ true }}">
     <section style="max-width:1200px;margin:0 auto;padding:0 24px">
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
-        <sc-for list="{{ saisons }}" as="s" hint-placeholder-count="21">
+        <sc-for list="{{ saisonsDesc }}" as="s" hint-placeholder-count="21">
           <a href="{{ s.href }}" style="position:relative;display:flex;flex-direction:column;gap:10px;padding:16px;min-height:180px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">
             <sc-if value="{{ s.actif }}" hint-placeholder-val="{{ false }}">
               <span style="position:absolute;top:0;left:0;right:0;height:6px;background:var(--color-accent)"></span>
             </sc-if>
-            <span style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;margin-top:6px">{{ s.annee }}</span>
+            <span style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 8px;margin-top:6px">
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em">{{ s.annee }}</span>
+              <sc-if value="{{ s.courante }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700)">Aujourd'hui</span>
+              </sc-if>
+            </span>
             <span style="font-size:14px;line-height:1.35;flex:1">{{ s.resume }}</span>
             <sc-if value="{{ s.aStats }}" hint-placeholder-val="{{ false }}">
               <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ s.stats }}</span>
@@ -227,15 +232,20 @@ a:hover{color:var(--color-accent)}
 <div data-screen-label="Saisons" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
   <div style="padding:48px 0 24px;display:grid;gap:12px">
     <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Saisons</h1>
-    <p style="margin:0;max-width:60ch;font-size:18px">Une case par année, de la création du club à ses dernières nouvelles.</p>
+    <p style="margin:0;max-width:60ch;font-size:18px">Une case par année, d'aujourd'hui à la création du club.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
-    <sc-for list="{{ saisons }}" as="s" hint-placeholder-count="21">
+    <sc-for list="{{ saisonsDesc }}" as="s" hint-placeholder-count="21">
       <a href="{{ s.href }}" style="position:relative;display:flex;flex-direction:column;gap:10px;padding:16px;min-height:180px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);text-decoration:none" style-hover="background:var(--color-neutral-200);color:inherit">
         <sc-if value="{{ s.actif }}" hint-placeholder-val="{{ false }}">
           <span style="position:absolute;top:0;left:0;right:0;height:6px;background:var(--color-accent)"></span>
         </sc-if>
-        <span style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;margin-top:6px">{{ s.annee }}</span>
+        <span style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 8px;margin-top:6px">
+          <span style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em">{{ s.annee }}</span>
+          <sc-if value="{{ s.courante }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700)">Aujourd'hui</span>
+          </sc-if>
+        </span>
         <span style="font-size:14px;line-height:1.35;flex:1">{{ s.resume }}</span>
         <sc-if value="{{ s.aStats }}" hint-placeholder-val="{{ false }}">
           <span style="font-size:13px;font-weight:600;color:var(--color-accent-700)">{{ s.stats }}</span>
@@ -361,6 +371,9 @@ a:hover{color:var(--color-accent)}
         </div>
         <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;line-height:1.1;margin:0">{{ c.nom }}</h2>
         <p style="margin:0;text-wrap:pretty">{{ c.texte }}</p>
+        <sc-if value="{{ c.aPalm }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ c.palmHref }}" style="font-size:14px;font-weight:600;color:var(--color-accent-700)">Palmarès : {{ c.palmTxt }} →</a>
+        </sc-if>
         <sc-if value="{{ c.aEvts }}" hint-placeholder-val="{{ false }}">
           <div style="display:grid;gap:4px;border-top:1px solid var(--color-divider);padding-top:10px;margin-top:auto">
             <sc-for list="{{ c.evts }}" as="e" hint-placeholder-count="1">
@@ -385,6 +398,82 @@ a:hover{color:var(--color-accent)}
       </div>
     </sc-for>
   </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ vPalmares }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Palmarès" style="max-width:1200px;margin:0 auto;padding:0 24px 64px">
+  <div style="padding:48px 0 24px;display:grid;gap:12px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-0.03em;margin:0">Palmarès</h1>
+    <p style="margin:0;max-width:60ch;font-size:18px;text-wrap:pretty">Titres, victoires, podiums et sélections des coureurs du club, puis les vainqueurs des courses qu'il a organisées.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+    <sc-for list="{{ pal.chiffres }}" as="c" hint-placeholder-count="4">
+      <div style="padding:18px 16px;border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);display:grid;gap:4px">
+        <span style="font-family:var(--font-heading);font-weight:800;font-size:48px;line-height:1;letter-spacing:-0.03em">{{ c.valeur }}</span>
+        <span style="font-size:14px;color:var(--color-neutral-700)">{{ c.libelle }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:24px 0 8px">
+    <div style="display:flex;flex-wrap:wrap;border:1px solid var(--color-divider);width:fit-content;max-width:100%">
+      <sc-for list="{{ pal.types }}" as="t" hint-placeholder-count="5">
+        <sc-if value="{{ t.actif }}" hint-placeholder-val="{{ false }}">
+          <button type="button" onClick="{{ t.choisir }}" style="padding:8px 12px;font:inherit;font-size:14px;border:0;background:var(--color-accent);color:var(--color-bg);cursor:pointer">{{ t.label }}</button>
+        </sc-if>
+        <sc-if value="{{ t.inactif }}" hint-placeholder-val="{{ true }}">
+          <button type="button" onClick="{{ t.choisir }}" style="padding:8px 12px;font:inherit;font-size:14px;border:0;background:transparent;color:var(--color-text);cursor:pointer" style-hover="background:var(--color-neutral-200)">{{ t.label }}</button>
+        </sc-if>
+      </sc-for>
+    </div>
+    <sc-if value="{{ pal.aFiltreCoureur }}" hint-placeholder-val="{{ false }}">
+      <a href="#/palmares" style="font-size:14px;font-weight:600">{{ pal.filtreCoureur }} · tout le club ×</a>
+    </sc-if>
+  </div>
+  <sc-for list="{{ pal.annees }}" as="a" hint-placeholder-count="4">
+    <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),max-content) minmax(0,1fr));gap:0 32px;border-top:2px solid var(--color-divider);padding:18px 0;margin-top:16px">
+      <a href="{{ a.href }}" style="font-family:var(--font-heading);font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.03em;text-decoration:none;min-width:150px">{{ a.annee }}</a>
+      <div style="display:grid">
+        <sc-for list="{{ a.lignes }}" as="l" hint-placeholder-count="3">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 20px;padding:10px 0;border-bottom:1px solid var(--color-divider)">
+            <span style="flex:0 0 11rem;font-weight:700;color:var(--color-accent-700)">{{ l.resultat }}</span>
+            <a href="{{ l.href }}" style="flex:0 0 12rem;font-weight:600;text-decoration:none" style-hover="color:var(--color-accent)">{{ l.nom }}</a>
+            <span style="flex:1 1 16rem;display:grid;gap:2px">
+              <span>{{ l.epreuve }}</span>
+              <sc-if value="{{ l.aNote }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:14px;color:var(--color-neutral-700)">{{ l.note }}</span>
+              </sc-if>
+            </span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-for>
+  <sc-if value="{{ pal.aClassement }}" hint-placeholder-val="{{ true }}">
+    <section style="border-top:2px solid var(--color-divider);margin-top:32px;padding:20px 0;display:grid">
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;margin:0 0 12px">Coureur par coureur</h2>
+      <sc-for list="{{ pal.classement }}" as="c" hint-placeholder-count="6">
+        <a href="{{ c.href }}" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 20px;padding:10px 0;border-top:1px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+          <span style="flex:0 0 3rem;font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:1">{{ c.victoires }}</span>
+          <span style="flex:0 0 13rem;font-weight:700">{{ c.nom }}</span>
+          <span style="flex:1 1 14rem;color:var(--color-neutral-800)">{{ c.detail }}</span>
+        </a>
+      </sc-for>
+    </section>
+  </sc-if>
+  <sc-if value="{{ pal.aVainqueurs }}" hint-placeholder-val="{{ true }}">
+    <section style="border-top:2px solid var(--color-divider);margin-top:16px;padding:20px 0;display:grid">
+      <h2 style="font-family:var(--font-heading);font-weight:800;font-size:28px;margin:0 0 4px">Les vainqueurs de nos courses</h2>
+      <p style="margin:0 0 12px;color:var(--color-neutral-700)">Les éditions dont le vainqueur est connu.</p>
+      <sc-for list="{{ pal.vainqueurs }}" as="v" hint-placeholder-count="6">
+        <a href="{{ v.href }}" style="display:flex;flex-wrap:wrap;gap:2px 20px;padding:10px 0;border-top:1px solid var(--color-divider);text-decoration:none" style-hover="color:var(--color-accent)">
+          <span style="flex:0 0 11rem;font-weight:600">{{ v.dateTxt }}</span>
+          <span style="flex:0 0 16rem">{{ v.course }}</span>
+          <span style="flex:1 1 14rem;font-weight:700">{{ v.vainqueur }}</span>
+        </a>
+      </sc-for>
+    </section>
+  </sc-if>
 </div>
 </sc-if>
 
@@ -553,15 +642,15 @@ a:hover{color:var(--color-accent)}
 
 <footer style="border-top:2px solid var(--color-divider)">
   <div style="max-width:1200px;margin:0 auto;padding:20px 24px 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:var(--color-neutral-700)">
-    <span>Team Cycliste Coincy Metz 3 · Coincy, Moselle · {{ debut }}–{{ fin }}</span>
-    <span>Textes et photos repris des sites du club, 2007–2020. <a href="{{ fbUrl }}" target="_blank" rel="noopener">Groupe Facebook</a></span>
+    <span>Team Cycliste Coincy Metz 3 · Coincy, Moselle · {{ periodeTxt }}</span>
+    <span>Textes et photos repris des sites du club depuis 2007 et de son <a href="{{ fbUrl }}" target="_blank" rel="noopener">groupe Facebook</a>.</span>
   </div>
 </footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;pisteAccueil&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;frise&quot;, &quot;saisons&quot;, &quot;recherche&quot;], &quot;default&quot;: &quot;saisons&quot;, &quot;tsType&quot;: &quot;'frise' | 'saisons' | 'recherche'&quot;, &quot;section&quot;: &quot;Accueil&quot;}, &quot;facebookUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Facebook&quot;}}">
 class Component extends DCLogic {
-  state = { route: ['accueil'], club: null, medias: null, charge: false, q: '', anneePhotos: 'toutes', photo: -1, liste: 'photos' };
+  state = { route: ['accueil'], club: null, medias: null, charge: false, q: '', anneePhotos: 'toutes', photo: -1, liste: 'photos', typePalm: 'tous' };
 
   componentDidMount() {
     this._hash = () => { this.setState({ route: this.lireRoute(), photo: -1 }); window.scrollTo(0, 0); };
@@ -626,12 +715,15 @@ class Component extends DCLogic {
 
   renderVals() {
     const s = this.state, route = s.route, vue = route[0];
-    const club = Object.assign({ chronologie: [], saisons: {}, coureurs: [], encadrement: [], courses: [], vie: [], sites: [], partenaires: [], videos: [], histoire: [], chiffres: [], fondation: 2000, fin: 2020 }, s.club || {});
+    const club = Object.assign({ chronologie: [], saisons: {}, coureurs: [], encadrement: [], courses: [], vie: [], sites: [], partenaires: [], videos: [], histoire: [], chiffres: [], palmares: [], fondation: 2000 }, s.club || {});
     const M = s.medias || {};
-    const debut = club.fondation, fin = club.fin;
     const an = (d) => String(d || '').slice(0, 4);
+    const cetteAnnee = new Date().getFullYear();
+    const debut = club.fondation;
+    const fin = club.fin || Math.max(cetteAnnee, ...Object.keys(club.saisons).map(Number).filter(Boolean));
+    const periodeTxt = club.fin ? debut + '–' + club.fin : 'depuis ' + debut;
 
-    const evts = club.chronologie.map(e => ({ ...e, annee: +an(e.date), dateTxt: this.dateTxt(e.date), dateCourte: this.dateCourte(e.date), href: '#/saison/' + an(e.date) }))
+    const evts = club.chronologie.map(e => ({ ...e, annee: +an(e.date), dateTxt: (e.approx ? 'vers ' : '') + this.dateTxt(e.date), dateCourte: this.dateCourte(e.date), href: '#/saison/' + an(e.date) }))
       .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 
     const courses = club.courses.map(c => {
@@ -665,8 +757,9 @@ class Component extends DCLogic {
     const saisons = annees.map(y => {
       const x = club.saisons[y] || {}, ev = evts.filter(e => e.annee === y);
       const stats = [x.victoires ? this.pl(x.victoires, 'victoire') : '', x.classement || ''].filter(Boolean).join(' · ');
-      return { annee: y, href: '#/saison/' + y, titres: ev.slice(0, 3), aPlus: ev.length > 3, plus: '+ ' + (ev.length - 3) + ' autres', resume: x.resume || (ev[0] && ev[0].titre) || '', actif: !!(x.resume || ev.length), stats, aStats: !!stats };
+      return { annee: y, href: '#/saison/' + y, titres: ev.slice(0, 3), aPlus: ev.length > 3, plus: '+ ' + (ev.length - 3) + ' autres', resume: x.resume || (ev[0] && ev[0].titre) || '', actif: !!(x.resume || ev.length), stats, aStats: !!stats, courante: y === cetteAnnee && !club.fin };
     });
+    const saisonsDesc = saisons.slice().reverse();
 
     let sc = {}, listeLb = [];
     if (vue === 'saison') {
@@ -699,7 +792,52 @@ class Component extends DCLogic {
     this._nb = listeLb.length;
     const lbM = s.photo >= 0 && s.liste === vue ? listeLb[s.photo] : null;
 
-    const coureurs = club.coureurs.map(c => ({ ...c, evts: evts.filter(e => e.coureur === c.id), aEvts: evts.some(e => e.coureur === c.id) }));
+    const fiches = {};
+    club.coureurs.forEach(c => { fiches[c.id] = c; });
+    const TYPES = { titre: 'Titre', victoire: 'Victoire', podium: 'Podium', selection: 'Sélection' };
+    const ORDRE = { titre: 0, victoire: 1, podium: 2, selection: 3 };
+    const palm = club.palmares.map(p => {
+      const f = fiches[p.coureur];
+      return { ...p, annee: +an(p.date), nom: f ? f.nom : p.coureur, cle: f ? p.coureur : '', href: f ? '#/palmares/' + p.coureur : '#/palmares',
+        n: p.nombre || 1, gagne: p.type === 'titre' || p.type === 'victoire',
+        epreuve: [p.epreuve, p.categorie].filter(Boolean).join(' · '), aNote: !!p.note, typeTxt: TYPES[p.type] || '' };
+    }).sort((a, b) => String(b.date).localeCompare(String(a.date)) || ORDRE[a.type] - ORDRE[b.type]);
+    const bilan = (liste) => {
+      const v = liste.filter(p => p.gagne).reduce((n, p) => n + p.n, 0);
+      const t = liste.filter(p => p.type === 'titre').length;
+      const po = liste.filter(p => p.type === 'podium').reduce((n, p) => n + p.n, 0);
+      const se = liste.filter(p => p.type === 'selection').length;
+      return { v, t, po, se, txt: [v ? this.pl(v, 'victoire') : '', t ? this.pl(t, 'titre') : '', po ? this.pl(po, 'podium') : '', se ? this.pl(se, 'sélection') : ''].filter(Boolean).join(' · ') };
+    };
+    const coureurs = club.coureurs.map(c => {
+      const b = bilan(palm.filter(p => p.coureur === c.id));
+      return { ...c, evts: evts.filter(e => e.coureur === c.id), aEvts: evts.some(e => e.coureur === c.id), aPalm: !!b.txt, palmTxt: b.txt, palmHref: '#/palmares/' + c.id };
+    });
+    let pal = {};
+    if (vue === 'palmares') {
+      const filtreC = route[1] && fiches[route[1]] ? route[1] : '';
+      const base = palm.filter(p => !filtreC || p.coureur === filtreC);
+      const tp = s.typePalm;
+      const liste = base.filter(p => tp === 'tous' || (tp === 'victoire' ? p.gagne : p.type === tp));
+      const b = bilan(base);
+      const anneesP = Array.from(new Set(liste.map(p => p.annee))).sort((x, y) => y - x);
+      const parCoureur = {};
+      palm.forEach(p => { (parCoureur[p.nom] = parCoureur[p.nom] || { nom: p.nom, href: p.href, liste: [] }).liste.push(p); });
+      const vainqueurs = [];
+      courses.forEach(c => c.editions.filter(e => e.vainqueur).forEach(e => vainqueurs.push({ date: e.date, dateTxt: e.dateTxt, course: [e.numero ? e.numero + ' ' : '', c.nom].join(''), vainqueur: e.vainqueur, href: e.hrefAnnee })));
+      vainqueurs.sort((x, y) => String(y.date).localeCompare(String(x.date)));
+      const typesDef = [['tous', 'Tout'], ['titre', 'Titres'], ['victoire', 'Victoires'], ['podium', 'Podiums'], ['selection', 'Sélections']];
+      pal = {
+        chiffres: [{ valeur: b.v, libelle: 'victoires, titres compris' }, { valeur: b.t, libelle: 'titres régionaux et départementaux' }, { valeur: b.po, libelle: 'podiums' }, { valeur: filtreC ? b.se : new Set(palm.map(p => p.nom)).size, libelle: filtreC ? 'sélections' : 'coureurs au palmarès' }],
+        types: typesDef.map(([id, label]) => ({ label, actif: tp === id, inactif: tp !== id, choisir: () => this.setState({ typePalm: id }) })),
+        aFiltreCoureur: !!filtreC, filtreCoureur: filtreC ? fiches[filtreC].nom : '',
+        annees: anneesP.map(y => ({ annee: y, href: '#/saison/' + y, lignes: liste.filter(p => p.annee === y) })),
+        classement: Object.values(parCoureur).map(c => { const x = bilan(c.liste); return { nom: c.nom, href: c.href, victoires: x.v, t: x.t, po: x.po, detail: x.txt }; })
+          .sort((x, y) => y.victoires - x.victoires || y.t - x.t || y.po - x.po || x.nom.localeCompare(y.nom)),
+        aClassement: !filtreC,
+        vainqueurs, aVainqueurs: !filtreC && vainqueurs.length > 0
+      };
+    }
 
     const nq = this.norm(s.q).trim();
     const resultats = [];
@@ -717,18 +855,19 @@ class Component extends DCLogic {
         (x.victoires_detail || []).forEach(v => { if (ok(v.coureur, v.detail, y)) resultats.push({ type: 'Saison', meta: y, titre: v.coureur + ' : ' + this.pl(v.nombre, 'victoire'), texte: v.detail, href: '#/saison/' + y }); });
       });
       club.vie.forEach(v => { if (ok(v.titre, v.texte)) resultats.push({ type: 'Vie du club', meta: '', titre: v.titre, texte: v.texte, href: '#/vie' }); });
+      palm.forEach(p => { if (ok(p.nom, p.resultat, p.epreuve, p.note || '', p.date)) resultats.push({ type: 'Palmarès', meta: this.dateTxt(p.date), titre: p.nom + ' : ' + p.resultat, texte: p.epreuve, href: p.href }); });
     }
     const choisirQ = (t) => () => this.setState({ q: t });
     const suggestions = ['Romain Genter', 'Johan Boucher', 'Kévin Hamel', 'Mirabelle', 'Comogyre', 'Cyclo-cross', 'Péraud', 'Téléthon', '2008'].map(t => ({ label: t, choisir: choisirQ(t) }));
 
-    const navDef = [['accueil', 'Accueil', '#/'], ['histoire', 'Histoire'], ['saisons', 'Saisons'], ['coureurs', 'Coureurs'], ['courses', 'Courses'], ['vie', 'Vie du club'], ['photos', 'Photos']];
+    const navDef = [['accueil', 'Accueil', '#/'], ['histoire', 'Histoire'], ['saisons', 'Saisons'], ['coureurs', 'Coureurs'], ['palmares', 'Palmarès'], ['courses', 'Courses'], ['vie', 'Vie du club'], ['photos', 'Photos']];
     if (documents.length) navDef.push(['documents', 'Documents']);
     const nav = navDef.map(([id, label, href]) => { const actif = vue === id || (id === 'saisons' && vue === 'saison'); return { label, href: href || '#/' + id, actif, inactif: !actif }; });
-    const vues = ['accueil', 'histoire', 'saisons', 'saison', 'coureurs', 'courses', 'vie', 'photos', 'documents', 'recherche'];
+    const vues = ['accueil', 'histoire', 'saisons', 'saison', 'coureurs', 'palmares', 'courses', 'vie', 'photos', 'documents', 'recherche'];
     const piste = this.props.pisteAccueil ?? 'saisons';
 
     return {
-      debut, fin, nav, accroche: club.accroche || '', chiffres: club.chiffres,
+      debut, fin, periodeTxt, nav, saisonsDesc, pal, accroche: club.accroche || '', chiffres: club.chiffres,
       fbUrl: this.props.facebookUrl || club.facebook || 'https://www.facebook.com/search/top?q=' + encodeURIComponent('TC Coincy Metz 3'),
       partageFb: 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(typeof window !== 'undefined' ? window.location.href : ''),
       friseRef: this.friseRef, friseDown: this.friseDown, friseClic: this.friseClic, friseDragStart: this.friseDragStart,
@@ -751,7 +890,7 @@ class Component extends DCLogic {
       aRecherche: nq.length >= 2, resTxt: nq.length < 2 ? 'Tapez au moins deux lettres.' : this.pl(resultats.length, 'résultat'),
       erreurChargement: s.charge && !s.club,
       vAccueil: vue === 'accueil', vHistoire: vue === 'histoire', vSaisons: vue === 'saisons', vSaison: vue === 'saison',
-      vCoureurs: vue === 'coureurs', vCourses: vue === 'courses', vVie: vue === 'vie', vPhotos: vue === 'photos',
+      vCoureurs: vue === 'coureurs', vPalmares: vue === 'palmares', vCourses: vue === 'courses', vVie: vue === 'vie', vPhotos: vue === 'photos',
       vDocs: vue === 'documents', vRecherche: vue === 'recherche', vIntrouvable: !vues.includes(vue),
       pFrise: piste === 'frise', pSaisons: piste === 'saisons', pRecherche: piste === 'recherche'
     };
